@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>WFC world generator · María Villar</title>
+<meta name="description" content="A 3D Wave Function Collapse generator in Unity that builds procedural islands from a hand-made 3D tileset, plus a tile-placement game built on it.">
+<link rel="canonical" href="https://mariavllr.github.io/projects/wfc/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="WFC world generator · María Villar">
+<meta property="og:description" content="A 3D Wave Function Collapse generator in Unity that builds procedural islands from a hand-made 3D tileset, plus a tile-placement game built on it.">
+<meta property="og:url" content="https://mariavllr.github.io/projects/wfc/">
+<meta property="og:image" content="https://mariavllr.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://mariavllr.github.io/projects/wfc/">
+<link rel="alternate" hreflang="es" href="https://mariavllr.github.io/es/projects/wfc/">
+<link rel="alternate" hreflang="x-default" href="https://mariavllr.github.io/projects/wfc/">
+<meta name="theme-color" content="#FFF8E7">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html" aria-label="María Villar, home">MV.</a>
+    <nav aria-label="Sections"><a href="../../index.html#work">Work</a><a href="../../index.html#research">Research</a><a href="../../index.html#art">Art</a><a href="../../index.html#about">About</a><a href="../../index.html#contact">Contact</a></nav>
+    <div class="lang" role="group" aria-label="Language"><a href="#" hreflang="en" lang="en" aria-current="page">EN</a><a href="../../es/projects/wfc/index.html" hreflang="es" lang="es">ES</a></div>
+  </div>
+</header>
+
+<main id="main" class="wrap case">
+  <a class="back" href="../../index.html#work">← Back to all work</a>
+  <p class="meta">PhD project · 2025 – now</p>
+  <h1>WFC world generator</h1>
+  <p class="lede">Procedurally generated islands built from a hand-made 3D tileset. Let the algorithm grow a whole world, or place the tiles yourself and watch it fill in the rest.</p>
+  <div class="cover reel stick" data-reel aria-roledescription="carousel" aria-label="Islands made by the generator">
+    <span class="tape" aria-hidden="true"></span>
+    <div class="reel-stage">
+      <video class="on" muted loop playsinline preload="metadata" poster="../../assets/img/wfc-large.webp" data-title="Large island" data-caption="Terraced cliffs, a winding river and three villages linked by paths." aria-label="Large island: Terraced cliffs, a winding river and three villages linked by paths. Waves and trees move in the wind."><source src="../../assets/video/wfc-large.mp4" type="video/mp4"></video>
+      <video muted loop playsinline preload="none" poster="../../assets/img/wfc-island.webp" data-title="Medium island" data-caption="Two villages split by cliffs, with a river crossed by bridges." aria-label="Medium island: Two villages split by cliffs, with a river crossed by bridges. Waves and trees move in the wind."><source src="../../assets/video/wfc-island.mp4" type="video/mp4"></video>
+      <video muted loop playsinline preload="none" poster="../../assets/img/wfc-small.webp" data-title="Small island" data-caption="A single hill with a village on the slope and a short stream." aria-label="Small island: A single hill with a village on the slope and a short stream. Waves and trees move in the wind."><source src="../../assets/video/wfc-small.mp4" type="video/mp4"></video>
+    </div>
+    <div class="reel-bar">
+      <p class="reel-cap" aria-live="polite"><b></b> <span></span></p>
+      <div class="reel-ctrl">
+        <button class="reel-btn" type="button" data-dir="-1" aria-label="Previous island">←</button>
+        <span class="reel-dots"><button class="reel-dot" type="button" aria-label="Show large island"></button><button class="reel-dot" type="button" aria-label="Show medium island"></button><button class="reel-dot" type="button" aria-label="Show small island"></button></span>
+        <button class="reel-btn" type="button" data-dir="1" aria-label="Next island">→</button>
+      </div>
+    </div>
+  </div>
+  <dl class="facts">
+    <div><dt>My role</dt><dd>Programming, 3D modelling, texturing</dd></div>
+    <div><dt>Context</dt><dd>PhD research, GameRS, Universitat Jaume I</dd></div>
+    <div><dt>Built with</dt><dd>Unity, C#, Blender</dd></div>
+    <div><dt>Modes</dt><dd>Full generation · Interactive placement</dd></div>
+    <div><dt>Status</dt><dd>In development · WebGL builds soon</dd></div>
+  </dl>
+
+  <section>
+    <h2>The challenge</h2>
+    <p>Procedural worlds often look either random or repetitive. Wave Function Collapse works from local rules: which tile may sit next to which. From those rules alone, it builds a whole map that is coherent everywhere.</p>
+    <p>My research asks how to keep that output feeling hand-made, and how to give artists real control over a world that builds itself.</p>
+  </section>
+
+  <section>
+    <h2>How WFC works <span class="hand">try it!</span></h2>
+    <div class="lab">
+      <div>
+        <canvas id="lab" width="400" height="400" role="img" aria-label="A grid of path tiles. Each open cell shows the small tiles it could still become; collapsed cells show their final tile"></canvas>
+        <div class="ctrl">
+          <button class="btn" id="lab-step" type="button">Step</button>
+          <button class="btn ghost" id="lab-play" type="button">Play</button>
+          <button class="btn ghost" id="lab-reset" type="button">Reset</button>
+        </div>
+      </div>
+      <div>
+        <div class="tileset"><figure><canvas class="tile-ico" data-t="0" width="44" height="44" aria-hidden="true"></canvas><figcaption>Grass</figcaption></figure><figure><canvas class="tile-ico" data-t="1" width="44" height="44" aria-hidden="true"></canvas><figcaption>Vertical path</figcaption></figure><figure><canvas class="tile-ico" data-t="2" width="44" height="44" aria-hidden="true"></canvas><figcaption>Horizontal path</figcaption></figure><figure><canvas class="tile-ico" data-t="3" width="44" height="44" aria-hidden="true"></canvas><figcaption>Crossroads</figcaption></figure></div>
+        <p class="rules">The only rule: <b>colours must match across every shared edge.</b></p>
+        <ol id="lab-steps">
+          <li data-s="0"><b>Superposition.</b> Every cell starts as all four tiles at once. The small tiles inside a cell are the ones it could still become.</li>
+          <li data-s="1"><b>Observe.</b> Pick the cell with the fewest options left, its lowest entropy, and collapse it to one of them at random.</li>
+          <li data-s="2"><b>Propagate.</b> Neighbours drop every tile whose edge doesn't match.</li>
+          <li data-s="3"><b>Repeat</b> until every cell has one tile. If a cell is left with no tile that fits, that's a contradiction, and the solve starts again.</li>
+        </ol>
+        <p class="log" id="lab-log" aria-live="polite">Press Step, or click a small tile to choose it yourself.</p>
+        <p class="credit">Tileset and walkthrough adapted from <a href="https://www.boristhebrave.com/2020/04/13/wave-function-collapse-explained/">Wave Function Collapse Explained</a> by Boris the Brave.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Two ways to grow a world</h2>
+    <div class="ways" style="margin-top:8px">
+      <div class="card stick way">
+        <div class="way-txt">
+        <h3>Generate</h3>
+        <p style="margin-top:8px">Generates a complete 3D island, with any tile set.</p>
+        </div>
+        <div class="way-media"><div class="play play-slot" data-embed="" data-itch="https://mariavllr.itch.io/" data-title="WFC world generator"><video class="cover loop builder-vid" autoplay muted loop playsinline preload="metadata" poster="../../assets/img/wfc-biomes-gen-poster.webp" aria-label="Three islands generated one after another: a temperate island with cliffs and pines, a snowy one with snowmen, and a desert one with palm trees"><source src="../../assets/video/wfc-biomes-gen.mp4" type="video/mp4"></video><button class="btn play-btn" type="button">Play in your browser ▶</button><p class="soon" hidden>Playable build coming soon.</p></div></div>
+      </div>
+      <div class="card stick way">
+        <div class="way-txt">
+        <span class="badge">Game prototype</span>
+        <h3>Build it yourself</h3>
+        <p style="margin-top:8px">A puzzle game built on the solver. A small patch is generated first, then tiles arrive in a queue and you drag them onto the map to complete missions and score points.</p>
+        <div class="flow" style="margin:14px 0 4px">
+          <div class="node">Pick a tile<small>from the queue</small></div><span class="arr">→</span>
+          <div class="node hl">Valid spots light up<small>checked live</small></div><span class="arr">→</span>
+          <div class="node hl">Drop it<small>its neighbours collapse in cascade</small></div>
+        </div>
+        </div>
+        <div class="way-media"><div class="play play-slot" data-embed="" data-itch="https://mariavllr.itch.io/" data-title="WFC tile placement game"><video class="cover loop builder-vid" autoplay muted loop playsinline preload="metadata" poster="../../assets/img/wfc-builder-poster.webp" aria-label="Gameplay of the tile placement prototype: tiles are dragged from a queue onto a small island, cliffs and forests snap into place and points pop up"><source src="../../assets/video/wfc-builder.mp4" type="video/mp4"></video><button class="btn play-btn" type="button">Play in your browser ▶</button><p class="soon" hidden>Playable build coming soon.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>My work</h2>
+    <ul class="did">
+      <li>A tile set modelled in Blender, designed so every edge matches its neighbours: coast, cliffs, rivers, paths and houses.</li>
+      <li>A WFC solver in Unity with weighted tiles, border constraints and fast regeneration.</li>
+      <li>Generation in layers (ground, sky…).</li>
+      <li>A socket system: every tile edge has a socket, so valid neighbours and rotated variants are generated automatically instead of being set up by hand.</li>
+      <li>An interactive mode with a tile queue, drag-and-drop placement, live highlighting of valid spots and cascading collapse after each move.</li>
+      <li>A game prototype with points and missions based on which tiles end up next to each other.</li>
+      <li>Global constraints, such as fixed tiles, rivers, or paths that connect villages, on top of the local rules between neighbours.</li>
+      <li>Optimisation of the algorithm for 3D grids.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>The tiles</h2>
+    <figure class="wire" tabindex="0">
+      <div class="wire-box"><img src="../../assets/img/wfc-tiles-blender.webp" alt="Tiles in Blender: a cliff with carved stairs, a river, a path, a tower and an orchard, low-poly with hand-painted colour" loading="lazy" width="1600" height="815"><img class="wf" src="../../assets/img/wfc-tiles-wire.webp" alt="The same tiles in wireframe" loading="lazy" width="1600" height="815"></div>
+      <figcaption><span class="hand hint-hover">Hover to see the wireframe</span><span class="hand hint-tap">Tap to see the wireframe</span> Each tile is modelled so its edges match its neighbours. The tower and the orchard are still waiting for their textures.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Publications</h2>
+    <div style="margin-top:10px">
+      <div class="paper"><p class="t"><a href="https://doi.org/10.2312/ceig.20251107">Procedural generation of 3D maps with Wave Function Collapse: optimization and advanced constraints</a></p><p class="a"><u>Villar-López</u>, Chover · CEIG 2025, Spanish Computer Graphics Conference (Eurographics)</p></div>
+      <div class="paper"><p class="t">Diseño y evaluación de un videojuego basado en Wave Function Collapse interactivo</p><p class="a"><u>Villar-López</u>, Chover, Marín-Lora · CEV 2026, Spanish Videogames Conference · proceedings forthcoming</p></div>
+      <div class="paper"><p class="t">Title to be announced</p><p class="a"><u>Villar-López</u> et al. · IEEE Transactions on Games · coming soon</p></div>
+    </div>
+  </section>
+
+  <div class="next"><a class="back" href="../../index.html#work">← All work</a><a class="btn" href="../fitoon/index.html">Next: Fitoon →</a></div>
+</main>
+
+<footer>Drawn, modelled and coded by María Villar</footer>
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

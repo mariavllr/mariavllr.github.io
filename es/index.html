@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>María Villar · Technical artist</title>
+  <meta name="description"
+    content="Technical artist en España. Dibujo, modelo y programo: generación procedural con Wave Function Collapse, personajes 3D y juegos en Unity, Blender y Unreal Engine 5.">
+  <link rel="canonical" href="https://mariavllr.github.io/es/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="es_ES">
+  <meta property="og:title" content="María Villar · Technical artist">
+  <meta property="og:description"
+    content="Technical artist en España. Dibujo, modelo y programo: generación procedural con Wave Function Collapse, personajes 3D y juegos en Unity, Blender y Unreal Engine 5.">
+  <meta property="og:url" content="https://mariavllr.github.io/es/">
+  <meta property="og:image" content="https://mariavllr.github.io/assets/img/og.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="alternate" hreflang="en" href="https://mariavllr.github.io/">
+  <link rel="alternate" hreflang="es" href="https://mariavllr.github.io/es/">
+  <link rel="alternate" hreflang="x-default" href="https://mariavllr.github.io/">
+  <meta name="theme-color" content="#FFF8E7">
+  <link rel="icon" href="../assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+  <link rel="stylesheet" href="../assets/css/style.css">
+</head>
+
+<body>
+  <a class="skip" href="#main">Saltar al contenido</a>
+  <header>
+    <div class="wrap">
+      <a class="logo" href="index.html" aria-label="María Villar, inicio">MV.</a>
+      <nav aria-label="Secciones"><a href="#work">Trabajo</a><a href="#research">Investigación</a><a
+          href="#art">Arte</a><a href="#about">Sobre mí</a><a href="#contact">Contacto</a></nav>
+      <div class="lang" role="group" aria-label="Idioma"><a href="../index.html" hreflang="en" lang="en">EN</a><a
+          href="#" hreflang="es" lang="es" aria-current="page">ES</a></div>
+    </div>
+  </header>
+
+  <main id="main" class="wrap">
+    <div id="top" class="spread hero">
+      <div class="page">
+        <div class="portrait">
+          <div class="b1"></div>
+          <div class="b2"></div><img src="../assets/img/portrait.webp"
+            alt="Autorretrato de María: línea de tinta y color a rotulador, coleta castaña, camiseta amarilla y peto vaquero">
+        </div>
+        <h1>María Villar</h1>
+        <p class="role">Technical artist. <b>Generalista 3D.</b></p>
+        <p class="intro">Investigadora predoctoral en generación procedural en GameRS, Universitat Jaume I. Creo
+          personajes, herramientas y juegos en Unity, Blender y Unreal Engine 5.</p>
+        <div class="note"><span class="hand">¡prueba a generar una isla!</span>
+          <svg class="doodle" width="64" height="30" viewBox="0 0 64 30" aria-hidden="true">
+            <path d="M3 20 C 18 6, 34 30, 52 14 M44 8 L54 13 L46 22" />
+          </svg>
+        </div>
+      </div>
+      <div class="page world">
+        <div class="frame sketch play" data-embed="" data-itch="https://mariavllr.itch.io/"
+          data-cover="../assets/img/wfc-cover.webp" data-title="Generador de mundos WFC" data-button="gen"><span
+            class="tape" aria-hidden="true"></span>
+          <canvas id="wfc" width="640" height="400" role="img"
+            aria-label="Una isla isométrica con casillas de agua, playa, hierba, bosque y pueblo, generada en el navegador con Wave Function Collapse"></canvas>
+        </div>
+        <div class="world-bar">
+          <span class="caption">Isla generada con Wave Function Collapse (próximamente build de Unity). <span
+              id="stat"></span></span>
+          <button class="btn" id="gen" type="button">Generar otra isla ↻</button>
+        </div>
+      </div>
+    </div>
+
+    <section id="work" aria-labelledby="work-h">
+      <div class="sec-head">
+        <h2 id="work-h">Trabajo destacado</h2><span class="hand">cosas que he hecho</span>
+        <svg class="doodle" width="70" height="20" viewBox="0 0 70 20" aria-hidden="true">
+          <path d="M3 12 Q 12 3, 20 12 T 37 12 T 54 12 T 67 10" />
+        </svg>
+      </div>
+      <div class="work">
+
+        <article class="piece feature stick">
+          <span class="badge">Proyecto de tesis</span>
+          <div class="shot"><span class="tape" aria-hidden="true"></span><video class="loop" autoplay muted loop
+              playsinline preload="metadata" poster="../assets/img/wfc-island.webp"
+              aria-label="Una isla creada por el generador WFC: acantilados, dos pueblos, un río con puentes y árboles que se mueven con el viento, rodeada de mar animado">
+              <source src="../assets/video/wfc-island.mp4" type="video/mp4">
+            </video></div>
+          <div>
+            <p class="meta">Unity · C# · Blender · 2025 – actualidad</p>
+            <h3>Generador de mundos WFC</h3>
+            <p>Un generador de mundos 3D por fichas inspirado en Townscaper, con dos modos: pulsar un botón para generar
+              una isla entera, o construirla tú arrastrando fichas desde una cola mientras el mundo colapsa alrededor de
+              tus decisiones. Modelo las fichas en Blender y programo el solver, las herramientas y los shaders en
+              Unity.</p>
+            <div class="role-list"><span class="chip y">Solver WFC</span><span class="chip y">Modelado de
+                fichas</span><span class="chip">Colocación interactiva</span><span class="chip">Shaders</span></div>
+            <a class="btn" href="projects/wfc/index.html">Ver cómo funciona →</a>
+          </div>
+        </article>
+      </div>
+
+      <div class="minor-head">
+        <h3>También en GameRS</h3><span class="hand">proyectos profesionales, 2023 – 2025</span>
+      </div>
+      <div class="minor">
+        <article class="mini stick">
+          <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img
+              src="../assets/img/fitoon-thumb.webp"
+              alt="Ilustración de Fitoon: una corredora junto a un móvil que muestra a su personaje en la carrera, con las frases Run in real life, run in game"
+              loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true">
+              <source src="../assets/video/fitoon-gameplay.mp4" type="video/mp4">
+            </video></div>
+          <p class="meta">Unity · ARCore · Android</p>
+          <h3>Fitoon</h3>
+          <p>Un juego de carreras para cinta de correr que se controla con la cabeza a través de la cámara frontal del
+            móvil.</p>
+          <div class="role-list"><span class="chip y">Programación AR</span><span class="chip">Personajes 3D</span><span
+              class="chip">Arte de UI</span></div>
+          <a class="btn case-btn" href="projects/fitoon/index.html">Leer el caso de estudio →</a>
+        </article>
+        <article class="mini stick">
+          <span class="badge">En Google Play</span>
+          <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img
+              src="../assets/img/segorbe-thumb.webp"
+              alt="Logo de Guardianes de Segorbe sobre una vista aérea del pueblo" loading="lazy"><video muted loop
+              playsinline preload="none" aria-hidden="true">
+              <source src="../assets/video/segorbe-hover.mp4" type="video/mp4">
+            </video></div>
+          <p class="meta">Unreal Engine 5 · ARCore · Android</p>
+          <h3>Guardianes de Segorbe</h3>
+          <p>Un juego turístico en AR en el que personajes de la historia del pueblo de Segorbe aparecen en lugares
+            emblemáticos reales.</p>
+          <div class="role-list"><span class="chip y">Programación AR</span><span class="chip">UI de diálogos</span>
+          </div>
+          <a class="btn case-btn" href="projects/segorbe/index.html">Leer el caso de estudio →</a>
+        </article>
+      </div>
+
+      <div class="minor-head">
+        <h3>Juegos personales y de game jams</h3><span class="hand">otros proyectos</span>
+      </div>
+      <div class="minor">
+        <article class="mini stick">
+          <span class="badge">TFG</span>
+          <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img
+              src="../assets/img/nebali-card.webp"
+              alt="Nebali: The Lost Island, una isla low-poly con palmeras, un embarcadero de madera y el protagonista, Mateo"
+              loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true">
+              <source src="../assets/video/nebali-campfire.mp4" type="video/mp4">
+            </video></div>
+          <p class="meta">Unity · Blender · Clip Studio Paint · 2023</p>
+          <h3>Nebali: The Lost Island</h3>
+          <p>Mi trabajo de fin de grado. Mateo naufraga en una isla desconocida y ayuda a sus habitantes a liberarla de
+            los Boos. Presentado en el Congreso Español de Videojuegos.</p>
+          <div class="role-list"><span class="chip y">Modelos 3D y texturas</span><span
+              class="chip y">Shaders</span><span class="chip">Diseño de juego y guion</span><span
+              class="chip">Programación</span><span class="chip">UI</span></div>
+          <a class="btn case-btn" href="projects/nebali/index.html">Leer el caso de estudio →</a>
+          <div class="links"><a href="https://mariavllr.itch.io/nebali-the-lost-island">Jugar en itch.io</a><a
+              href="https://www.youtube.com/watch?v=X46pWPQkmEc">Vídeo de gameplay</a><a
+              href="https://repositori.uji.es/xmlui/handle/10234/203636">Leer la memoria</a></div>
+        </article>
+        <article class="mini stick">
+          <span class="badge">Ganador de la jam</span>
+          <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img
+              src="../assets/img/tgf-card.webp"
+              alt="El enemigo como caballero medieval con espada, junto a un escudo rojo" loading="lazy"><video muted
+              loop playsinline preload="none" aria-hidden="true">
+              <source src="../assets/video/tgf-knight.mp4" type="video/mp4">
+            </video></div>
+          <p class="meta">UJI Game Jam 2026 · 48h · Tema: Un solo enemigo</p>
+          <h3>That Goddamn Face!</h3>
+          <p>Pequeño proyecto hecho en 48 horas. Un juego en primera persona sobre un único enemigo del que nunca te
+            libras. Te enfrentas al mismo hombre en la prehistoria, la Edad Media y el Lejano Oeste, y luchas contra él
+            con distintas armas. Modelé todos los personajes 3D en Blender y adapté sus animaciones.</p>
+          <div class="role-list"><span class="chip y">Personajes 3D</span><span class="chip y">Animación</span></div>
+          <a class="btn case-btn" href="projects/that-goddamn-face/index.html">Leer el caso de estudio →</a>
+          <div class="links"><a href="https://mariavllr.itch.io/that-goddamn-face">Jugar en itch.io</a><a
+              href="https://www.youtube.com/watch?v=6AdIq4vunBU">Tráiler</a><a
+              href="https://itch.io/jam/uji-game-jam-26-ugj26/rate/4272632">Página de la jam</a></div>
+        </article>
+      </div>
+      <div class="links" style="margin-top:20px"><a href="https://mariavllr.itch.io/">Más juegos míos en itch.io →</a>
+      </div>
+    </section>
+
+    <section id="research" aria-labelledby="research-h">
+      <div class="sec-head">
+        <h2 id="research-h">Investigación</h2><span class="hand">en lo que trabajo cada día</span>
+        <svg class="doodle" width="70" height="20" viewBox="0 0 70 20" aria-hidden="true">
+          <path d="M3 12 Q 12 3, 20 12 T 37 12 T 54 12 T 67 10" />
+        </svg>
+      </div>
+      <div class="two">
+        <div class="card stick">
+          <p class="meta">Doctorado · GameRS, Universitat Jaume I · 2025 – actualidad</p>
+          <h3 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:6px 0 12px">Mundos procedurales interactivos, más
+            orientados al artista</h3>
+          <p>Mi tesis estudia la generación procedural de contenido con Wave Function Collapse. Investigo cómo los
+            mundos generados pueden conservar la sensación de arte hecho a mano, y cómo artistas y jugadores pueden dar
+            forma a lo que construye el algoritmo.</p>
+          <div class="role-list"><span class="chip y">Wave Function Collapse</span><span class="chip y">Generación
+              procedural</span><span class="chip">Generación interactiva</span><span class="chip">Sets de fichas
+              3D</span></div>
+          <a class="btn" href="projects/wfc/index.html">Ver el generador →</a>
+        </div>
+        <div class="card stick">
+          <h3>Publicaciones</h3>
+          <div style="margin-top:10px">
+            <div class="paper">
+              <p class="t"><a href="https://doi.org/10.2312/ceig.20251107">Procedural generation of 3D maps with Wave
+                  Function Collapse: optimization and advanced constraints</a></p>
+              <p class="a"><u>Villar-López</u>, Chover · CEIG 2025, Congreso Español de Informática Gráfica
+                (Eurographics)</p>
+            </div>
+            <div class="paper">
+              <p class="t">Diseño y evaluación de un videojuego basado en Wave Function Collapse interactivo</p>
+              <p class="a"><u>Villar-López</u>, Chover, Marín-Lora · CEV 2026, Congreso Español de Videojuegos · actas pendientes de publicación</p>
+            </div>
+            <div class="paper">
+              <p class="t"><a href="https://link.springer.com/article/10.1007/s10055-026-01355-w">Evaluating game
+                  experience in a treadmill exergame: virtual reality versus screen-based display</a></p>
+              <p class="a">Marín-Lora, <u>Villar-López</u>, et al. · Virtual Reality (Springer), 2026</p>
+            </div>
+            <div class="paper">
+              <p class="t"><a href="https://www.mdpi.com/1424-8220/26/1/20">Optimizing the interaction system for
+                  treadmill video games using a smartphone's front camera</a></p>
+              <p class="a">Martin, Marín-Lora, <u>Villar-López</u>, Chover · Sensors, 2026</p>
+            </div>
+          </div>
+          <div class="links" style="margin-top:10px"><a href="https://orcid.org/0009-0007-8211-3736">Todas las
+              publicaciones en ORCID →</a></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="art" aria-labelledby="art-h">
+      <div class="sec-head">
+        <h2 id="art-h">Arte</h2><span class="hand">modelado 3D</span>
+        <svg class="doodle" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true">
+          <path d="M17 3 L21 13 L31 14 L23 21 L26 31 L17 25 L8 31 L11 21 L3 14 L13 13 Z" />
+        </svg>
+      </div>
+      <p class="art-intro">Tres tipos de trabajo: un personaje orgánico, personajes low-poly optimizados para juego móvil
+        y un escenario hard-surface.</p>
+      <div class="gallery">
+        <figure class="art stick"><button class="proc-open" type="button" data-proc="proc-dryad"
+            aria-label="Ver la dríada, del blocking al render"><img src="../assets/img/dryad.webp"
+              alt="Render 3D de una dríada verde con astas y ropa de hojas, y un dibujo luminoso en un brazo, en un bosque nocturno estilizado"
+              loading="lazy"></button>
+          <figcaption><b>Dríada del bosque</b><span class="kind">Personaje orgánico</span>ZBrush, Maya, Substance
+            Painter, UE5<button class="proc-link" type="button" data-proc="proc-dryad">Ver el proceso →</button>
+          </figcaption>
+        </figure>
+        <figure class="art stick"><button class="proc-open cycle" type="button" data-proc="proc-fitoon"
+            aria-label="Los cinco runners de Fitoon. Abre para ver cada uno"><img class="on"
+              src="../assets/img/fitoon-juan.webp" alt="" loading="lazy"><img src="../assets/img/fitoon-laura.webp"
+              alt="" loading="lazy"><img src="../assets/img/fitoon-alberto.webp" alt="" loading="lazy"><img
+              src="../assets/img/fitoon-paula.webp" alt="" loading="lazy"><img src="../assets/img/fitoon-diego.webp"
+              alt="" loading="lazy"></button>
+          <figcaption><b>Runners de Fitoon</b><span class="kind">Low-poly para móvil</span>Blender<button
+              class="proc-link" type="button" data-proc="proc-fitoon">Ver más →</button></figcaption>
+        </figure>
+        <figure class="art stick">
+          <div class="ph"><span class="hand">render de interior</span><span class="caption">próximamente</span></div>
+          <figcaption><b>Escena de interior</b><span class="kind">Escenario, hard-surface</span><span
+              class="todo">añadir título y herramientas</span></figcaption>
+        </figure>
+      </div>
+      <template id="proc-reel" data-title="Reel de animación" data-more="https://vimeo.com/1082870306"
+        data-more-label="Abrir en Vimeo →" data-close="Cerrar">
+        <figure data-step="Reel de animación"
+          data-iframe="https://player.vimeo.com/video/1082870306?h=6bd6f46d95&amp;dnt=1&amp;autoplay=1">
+          <figcaption>Animación y modelado 3D de mi máster en Animación 3D.</figcaption>
+        </figure>
+      </template>
+      <template id="proc-fitoon" data-title="Runners de Fitoon · el reparto" data-more="projects/fitoon/"
+        data-more-label="Leer el caso de Fitoon →" data-close="Cerrar" data-prev="Anterior" data-next="Siguiente">
+        <figure data-step="Chico naranja"><img src="../assets/img/fitoon-juan.webp"
+            alt="Juan, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy">
+          <figcaption>Uno de los cinco runners, low-poly para móvil.</figcaption>
+        </figure>
+        <figure data-step="Chica rubia"><img src="../assets/img/fitoon-laura.webp"
+            alt="Laura, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy">
+          <figcaption>Uno de los cinco runners, low-poly para móvil.</figcaption>
+        </figure>
+        <figure data-step="Chico con barba"><img src="../assets/img/fitoon-alberto.webp"
+            alt="Alberto, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy">
+          <figcaption>Uno de los cinco runners, low-poly para móvil.</figcaption>
+        </figure>
+        <figure data-step="Chica con gafas"><img src="../assets/img/fitoon-paula.webp"
+            alt="Paula, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy">
+          <figcaption>Uno de los cinco runners, low-poly para móvil.</figcaption>
+        </figure>
+        <figure data-step="Chico verde"><img src="../assets/img/fitoon-diego.webp"
+            alt="Diego, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy">
+          <figcaption>Uno de los cinco runners, low-poly para móvil.</figcaption>
+        </figure>
+        <figure data-step="Editor"><img src="../assets/img/fitoon-creator.webp"
+            alt="Editor de personajes de Fitoon: un corredor con camiseta naranja, muestras de color para la ropa y un botón de guardar"
+            loading="lazy">
+          <figcaption>En el juego se pueden cambiar los colores de piel, pelo y ropa.</figcaption>
+        </figure>
+      </template>
+      <template id="proc-dryad" data-title="Dríada del bosque · del blocking al render"
+        data-more="https://mariavllr.artstation.com/projects/5WYOl8" data-more-label="Proceso completo en ArtStation →"
+        data-close="Cerrar" data-prev="Anterior" data-next="Siguiente">
+        <figure data-step="Blocking"><img src="../assets/img/dryad-p1-blocking.webp"
+            alt="Vistas frontal, lateral y trasera de la dríada con formas base de colores" loading="lazy">
+          <figcaption>Blocking de proporciones y volúmenes en ZBrush, antes de cualquier detalle.</figcaption>
+        </figure>
+        <figure data-step="Escultura"><img src="../assets/img/dryad-p2-sculpt.webp"
+            alt="Escultura de la dríada en ZBrush sin textura, vista frontal" loading="lazy">
+          <figcaption>Escultura high-poly en ZBrush: ropa, pelo y astas.</figcaption>
+        </figure>
+        <figure data-step="Retopología"><img src="../assets/img/dryad-p3-retopo.webp"
+            alt="Wireframe de la malla low-poly de la dríada" loading="lazy">
+          <figcaption>Retopología low-poly en Maya, lista para el bake.</figcaption>
+        </figure>
+        <figure data-step="Texturizado"><img src="../assets/img/dryad-p4-texture.webp"
+            alt="La cabeza de la dríada pintándose en Substance Painter" loading="lazy">
+          <figcaption>Texturizado en Substance Painter.</figcaption>
+        </figure>
+        <figure data-step="Final"><img src="../assets/img/dryad-final-1.webp"
+            alt="Render de cuerpo entero de la dríada en un bosque nocturno" loading="lazy">
+          <figcaption>Render final.</figcaption>
+        </figure>
+        <figure data-step="Final"><img src="../assets/img/dryad-final-4.webp"
+            alt="La dríada en tres cuartos delante de unas escaleras de piedra y un árbol con luz" loading="lazy">
+          <figcaption>Render final, vista de tres cuartos.</figcaption>
+        </figure>
+        <figure data-step="Final"><img src="../assets/img/dryad-final-7.webp"
+            alt="Primer plano de la cara de la dríada con astas y pelo de hojas" loading="lazy">
+          <figcaption>Primer plano.</figcaption>
+        </figure>
+      </template>
+      <div class="also">
+        <p class="also-label hand">además…</p>
+        <figure class="art-mini"><button class="proc-open reel-thumb" type="button" data-proc="proc-reel"
+            aria-label="Reproducir el reel de animación"><img
+              src="https://i.vimeocdn.com/video/2013950092-5a4fc607c18ffdf52ef9208e7c43d5fa98d66e0bb44d759a38563e4369bccf45-d_640x360"
+              alt="" loading="lazy" onerror="this.remove()"><span class="reel-play" aria-hidden="true">▶</span></button>
+          <figcaption><b>Reel de animación</b>Máster en Animación 3D · Maya · 48 s<button class="proc-link"
+              type="button" data-proc="proc-reel">Verlo →</button></figcaption>
+        </figure>
+        <figure class="art-mini"><img src="../assets/img/portrait.webp"
+            alt="Autorretrato en pintura digital con estilo de tinta y rotulador" loading="lazy">
+          <figcaption><b>Dibujo</b>En Instagram</figcaption>
+        </figure>
+        <div class="also-more">
+          <p class="caption">Más trabajo</p><a href="https://artstation.com/mariavllr">3D en ArtStation →</a><a
+            href="https://instagram.com/mariavillardev">Dibujos en Instagram →</a>
+        </div>
+      </div>
+    </section>
+
+
+
+    <section id="about" aria-labelledby="about-h">
+      <div class="sec-head">
+        <h2 id="about-h">Sobre mí</h2><span class="hand">¡hola otra vez!</span>
+      </div>
+      <div class="about">
+        <div class="card stick">
+          <p>¡Hola! Me llamo María y vivo en España. Estudié un grado en Diseño y Desarrollo de Videojuegos y me
+            especialicé en el mundo del 3D. Mis juegos favoritos son la saga de The Legend of Zelda, Animal Crossing o
+            Stardew Valley. Soy una persona creativa y abierta a nuevas ideas. Me encanta crear cosas nuevas, siempre
+            buscando dar importancia al apartado artístico, y por eso nació la idea de mi tesis. Como hobbies (además de
+            los videojuegos) me gusta dibujar, tocar el piano y hacer figuras con arcilla. </p>
+          <ul class="timeline">
+            <li><span class="y">2025 – actualidad</span><span>Investigadora predoctoral, GameRS<small>Doctorado en
+                  generación procedural · Universitat Jaume I</small></span></li>
+            <li><span class="y">2023 – 25</span><span>Desarrolladora de videojuegos y artista 3D, GameRS<small>Juegos
+                  móviles serios y activos en Unity y UE5</small></span></li>
+            <li><span class="y">Máster</span><span>Máster en Animación 3D<small>Universidad Europea de
+                  Madrid</small></span></li>
+            <li><span class="y">Grado</span><span>Grado en Diseño y Desarrollo de Videojuegos<small>Universitat Jaume I
+                  · Premio al mejor expediente de mi promoción</small></span></li>
+          </ul>
+        </div>
+        <div class="card stick">
+          <h3>Herramientas</h3>
+          <div class="tools">
+            <div><span class="k">Motores</span><span class="chips" style="margin:0"><span
+                  class="chip y">Unity</span><span class="chip">Unreal Engine 5</span></span></div>
+            <div><span class="k">3D</span><span class="chips" style="margin:0"><span class="chip y">Blender</span><span
+                  class="chip">Maya</span><span class="chip">ZBrush</span><span class="chip">Substance
+                  Painter</span></span></div>
+            <div><span class="k">2D y vídeo</span><span class="chips" style="margin:0"><span
+                  class="chip">Photoshop</span><span class="chip">Premiere</span><span class="chip">After
+                  Effects</span></span></div>
+            <div><span class="k">Código</span><span class="chips" style="margin:0"><span class="chip y">C#</span><span
+                  class="chip">C++</span><span class="chip">Python</span><span class="chip">JavaScript</span><span
+                  class="chip">Git / GitHub</span></span></div>
+            <div><span class="k">Además</span><span class="chips" style="margin:0"><span class="chip s">AR
+                  (ARCore)</span><span class="chip s">VR (Meta Quest)</span><span class="chip s">Generación
+                  procedural</span></span></div>
+          </div>
+          <p class="caption" style="margin-top:14px">Amarillo = experiencia avanzada</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact" aria-labelledby="contact-h">
+      <p class="hand">¿quieres hablar?</p>
+      <h2 id="contact-h">¡Escríbeme!</h2>
+      <div class="links">
+        <a href="https://www.linkedin.com/in/mariavillarlopez/">LinkedIn</a>
+        <a href="https://mariavillardev.wordpress.com/wp-content/uploads/2022/06/curriculum2026.pdf">CV (PDF)</a>
+        <a href="https://artstation.com/mariavllr">ArtStation</a>
+        <a href="https://mariavllr.itch.io/">itch.io</a>
+        <a href="https://instagram.com/mariavillardev">Instagram</a>
+        <a href="https://orcid.org/0009-0007-8211-3736">ORCID</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>Creado por María Villar con ♥</footer>
+  <script src="../assets/js/main.js" defer></script>
+</body>
+
+</html>

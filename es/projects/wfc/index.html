@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Generador de mundos WFC · María Villar</title>
+<meta name="description" content="Un generador 3D con Wave Function Collapse en Unity que crea islas procedurales a partir de un tileset 3D hecho a mano, y un juego de colocar fichas construido sobre él.">
+<link rel="canonical" href="https://mariavllr.github.io/es/projects/wfc/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Generador de mundos WFC · María Villar">
+<meta property="og:description" content="Un generador 3D con Wave Function Collapse en Unity que crea islas procedurales a partir de un tileset 3D hecho a mano, y un juego de colocar fichas construido sobre él.">
+<meta property="og:url" content="https://mariavllr.github.io/es/projects/wfc/">
+<meta property="og:image" content="https://mariavllr.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://mariavllr.github.io/projects/wfc/">
+<link rel="alternate" hreflang="es" href="https://mariavllr.github.io/es/projects/wfc/">
+<link rel="alternate" hreflang="x-default" href="https://mariavllr.github.io/projects/wfc/">
+<meta name="theme-color" content="#FFF8E7">
+<link rel="icon" href="../../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html" aria-label="María Villar, inicio">MV.</a>
+    <nav aria-label="Secciones"><a href="../../index.html#work">Trabajo</a><a href="../../index.html#research">Investigación</a><a href="../../index.html#art">Arte</a><a href="../../index.html#about">Sobre mí</a><a href="../../index.html#contact">Contacto</a></nav>
+    <div class="lang" role="group" aria-label="Idioma"><a href="../../../projects/wfc/index.html" hreflang="en" lang="en">EN</a><a href="#" hreflang="es" lang="es" aria-current="page">ES</a></div>
+  </div>
+</header>
+
+<main id="main" class="wrap case">
+  <a class="back" href="../../index.html#work">← Volver a todo el trabajo</a>
+  <p class="meta">Proyecto de tesis · 2025 – actualidad</p>
+  <h1>Generador de mundos WFC</h1>
+  <p class="lede">Islas generadas proceduralmente a partir de un tileset 3D hecho a mano. Deja que el algoritmo haga crecer un mundo entero, o coloca tú las fichas y mira cómo completa el resto.</p>
+  <div class="cover reel stick" data-reel aria-roledescription="carousel" aria-label="Islas creadas por el generador">
+    <span class="tape" aria-hidden="true"></span>
+    <div class="reel-stage">
+      <video class="on" muted loop playsinline preload="metadata" poster="../../../assets/img/wfc-large.webp" data-title="Isla grande" data-caption="Acantilados en terrazas, un río sinuoso y tres pueblos unidos por caminos." aria-label="Isla grande: Acantilados en terrazas, un río sinuoso y tres pueblos unidos por caminos. Las olas y los árboles se mueven con el viento."><source src="../../../assets/video/wfc-large.mp4" type="video/mp4"></video>
+      <video muted loop playsinline preload="none" poster="../../../assets/img/wfc-island.webp" data-title="Isla mediana" data-caption="Dos pueblos separados por acantilados, con un río cruzado por puentes." aria-label="Isla mediana: Dos pueblos separados por acantilados, con un río cruzado por puentes. Las olas y los árboles se mueven con el viento."><source src="../../../assets/video/wfc-island.mp4" type="video/mp4"></video>
+      <video muted loop playsinline preload="none" poster="../../../assets/img/wfc-small.webp" data-title="Isla pequeña" data-caption="Una sola colina con un pueblo en la ladera y un arroyo corto." aria-label="Isla pequeña: Una sola colina con un pueblo en la ladera y un arroyo corto. Las olas y los árboles se mueven con el viento."><source src="../../../assets/video/wfc-small.mp4" type="video/mp4"></video>
+    </div>
+    <div class="reel-bar">
+      <p class="reel-cap" aria-live="polite"><b></b> <span></span></p>
+      <div class="reel-ctrl">
+        <button class="reel-btn" type="button" data-dir="-1" aria-label="Isla anterior">←</button>
+        <span class="reel-dots"><button class="reel-dot" type="button" aria-label="Mostrar isla grande"></button><button class="reel-dot" type="button" aria-label="Mostrar isla mediana"></button><button class="reel-dot" type="button" aria-label="Mostrar isla pequeña"></button></span>
+        <button class="reel-btn" type="button" data-dir="1" aria-label="Isla siguiente">→</button>
+      </div>
+    </div>
+  </div>
+  <dl class="facts">
+    <div><dt>Mi rol</dt><dd>Programación, modelado 3D, texturizado</dd></div>
+    <div><dt>Contexto</dt><dd>Investigación doctoral, GameRS, Universitat Jaume I</dd></div>
+    <div><dt>Hecho con</dt><dd>Unity, C#, Blender</dd></div>
+    <div><dt>Modos</dt><dd>Generación completa · Colocación interactiva</dd></div>
+    <div><dt>Estado</dt><dd>En desarrollo · builds WebGL próximamente</dd></div>
+  </dl>
+
+  <section>
+    <h2>El reto</h2>
+    <p>Los mundos procedurales suelen parecer aleatorios o repetitivos. Wave Function Collapse parte de reglas locales: qué ficha puede ir junto a cuál. Solo con esas reglas, construye un mapa entero que es coherente en todas partes.</p>
+    <p>Mi investigación estudia cómo conseguir que ese resultado siga pareciendo hecho a mano, y cómo dar a los artistas control real sobre un mundo que se construye solo.</p>
+  </section>
+
+  <section>
+    <h2>Cómo funciona WFC <span class="hand">¡pruébalo!</span></h2>
+    <div class="lab">
+      <div>
+        <canvas id="lab" width="400" height="400" role="img" aria-label="Una cuadrícula de fichas de caminos. Cada celda abierta muestra las fichas pequeñas que aún puede ser; las celdas colapsadas muestran su ficha final"></canvas>
+        <div class="ctrl">
+          <button class="btn" id="lab-step" type="button">Paso</button>
+          <button class="btn ghost" id="lab-play" type="button">Reproducir</button>
+          <button class="btn ghost" id="lab-reset" type="button">Reiniciar</button>
+        </div>
+      </div>
+      <div>
+        <div class="tileset"><figure><canvas class="tile-ico" data-t="0" width="44" height="44" aria-hidden="true"></canvas><figcaption>Hierba</figcaption></figure><figure><canvas class="tile-ico" data-t="1" width="44" height="44" aria-hidden="true"></canvas><figcaption>Camino vertical</figcaption></figure><figure><canvas class="tile-ico" data-t="2" width="44" height="44" aria-hidden="true"></canvas><figcaption>Camino horizontal</figcaption></figure><figure><canvas class="tile-ico" data-t="3" width="44" height="44" aria-hidden="true"></canvas><figcaption>Cruce</figcaption></figure></div>
+        <p class="rules">La única regla: <b>los colores tienen que coincidir en cada borde compartido.</b></p>
+        <ol id="lab-steps">
+          <li data-s="0"><b>Superposición.</b> Cada celda empieza siendo las cuatro fichas a la vez. Las fichas pequeñas dentro de una celda son las que todavía puede llegar a ser.</li>
+          <li data-s="1"><b>Observar.</b> Se elige la celda con menos opciones restantes, la de menor entropía, y se colapsa a una de ellas al azar.</li>
+          <li data-s="2"><b>Propagar.</b> Las vecinas descartan las fichas cuyo borde no encaja.</li>
+          <li data-s="3"><b>Repetir</b> hasta que cada celda tenga una sola ficha. Si una celda se queda sin ninguna ficha que encaje, es una contradicción y se empieza de nuevo.</li>
+        </ol>
+        <p class="log" id="lab-log" aria-live="polite">Pulsa Paso, o haz clic en una ficha pequeña para elegirla tú.</p>
+        <p class="credit">Fichas y explicación adaptadas de <a href="https://www.boristhebrave.com/2020/04/13/wave-function-collapse-explained/">Wave Function Collapse Explained</a>, de Boris the Brave.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Dos formas de hacer crecer un mundo</h2>
+    <div class="ways" style="margin-top:8px">
+      <div class="card stick way">
+        <div class="way-txt">
+        <h3>Generar</h3>
+        <p style="margin-top:8px">Genera una isla completa tridimensional, con cualquier set de fichas.</p>
+        </div>
+        <div class="way-media"><div class="play play-slot" data-embed="" data-itch="https://mariavllr.itch.io/" data-title="Generador de mundos WFC"><video class="cover loop builder-vid" autoplay muted loop playsinline preload="metadata" poster="../../../assets/img/wfc-biomes-gen-poster.webp" aria-label="Tres islas generándose una tras otra: una templada con acantilados y pinos, una nevada con muñecos de nieve y una de desierto con palmeras"><source src="../../../assets/video/wfc-biomes-gen.mp4" type="video/mp4"></video><button class="btn play-btn" type="button">Jugar en el navegador ▶</button><p class="soon" hidden>Build jugable próximamente.</p></div></div>
+      </div>
+      <div class="card stick way">
+        <div class="way-txt">
+        <span class="badge">Prototipo de juego</span>
+        <h3>Constrúyela tú</h3>
+        <p style="margin-top:8px">Un juego de puzles construido sobre el solver. Primero se genera una zona pequeña; luego las fichas llegan en una cola y las arrastras al mapa para completar misiones y sumar puntos.</p>
+        <div class="flow" style="margin:14px 0 4px">
+          <div class="node">Coge una ficha<small>de la cola</small></div><span class="arr">→</span>
+          <div class="node hl">Se iluminan los huecos válidos<small>comprobados en directo</small></div><span class="arr">→</span>
+          <div class="node hl">Suéltala<small>sus vecinas colapsan en cascada</small></div>
+        </div>
+        </div>
+        <div class="way-media"><div class="play play-slot" data-embed="" data-itch="https://mariavllr.itch.io/" data-title="Juego de colocar fichas WFC"><video class="cover loop builder-vid" autoplay muted loop playsinline preload="metadata" poster="../../../assets/img/wfc-builder-poster.webp" aria-label="Partida del prototipo de colocar fichas: se arrastran fichas desde una cola a una isla pequeña, los acantilados y bosques encajan y aparecen puntos"><source src="../../../assets/video/wfc-builder.mp4" type="video/mp4"></video><button class="btn play-btn" type="button">Jugar en el navegador ▶</button><p class="soon" hidden>Build jugable próximamente.</p></div></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mi trabajo</h2>
+    <ul class="did">
+      <li>Un set de fichas modelado en Blender, diseñado para que cada borde encaje con sus vecinas: costa, acantilados, ríos, caminos y casas.</li>
+      <li>Un solver WFC en Unity con fichas ponderadas, restricciones de borde y regeneración rápida.</li>
+      <li>Generación por capas (suelo, cielo…).</li>
+      <li>Un sistema de sockets: cada borde de una ficha tiene un socket, así que las vecinas válidas y las variantes rotadas se generan automáticamente en lugar de configurarse a mano.</li>
+      <li>Un modo interactivo con cola de fichas, colocación arrastrando y soltando, resaltado en directo de los huecos válidos y colapso en cascada tras cada movimiento.</li>
+      <li>Un prototipo de juego con puntos y misiones según qué fichas quedan unas junto a otras.</li>
+      <li>Restricciones globales, como fichas fijas, ríos o caminos que conectan pueblos, además de las reglas locales entre vecinas.</li>
+      <li>Optimización del algoritmo en 3D.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Las fichas</h2>
+    <figure class="wire" tabindex="0">
+      <div class="wire-box"><img src="../../../assets/img/wfc-tiles-blender.webp" alt="Fichas en Blender: un acantilado con escaleras talladas, un río, un camino, una torre y un huerto, low-poly con color pintado a mano" loading="lazy" width="1600" height="815"><img class="wf" src="../../../assets/img/wfc-tiles-wire.webp" alt="Las mismas fichas en wireframe" loading="lazy" width="1600" height="815"></div>
+      <figcaption><span class="hand hint-hover">Pasa el ratón para ver el wireframe</span><span class="hand hint-tap">Toca para ver el wireframe</span> Cada ficha está modelada para que sus bordes encajen con las vecinas. La torre y el huerto aún esperan sus texturas.</figcaption>
+    </figure>
+  </section>
+
+  <section>
+    <h2>Publicaciones</h2>
+    <div style="margin-top:10px">
+      <div class="paper"><p class="t"><a href="https://doi.org/10.2312/ceig.20251107">Procedural generation of 3D maps with Wave Function Collapse: optimization and advanced constraints</a></p><p class="a"><u>Villar-López</u>, Chover · CEIG 2025, Congreso Español de Informática Gráfica (Eurographics)</p></div>
+      <div class="paper"><p class="t">Diseño y evaluación de un videojuego basado en Wave Function Collapse interactivo</p><p class="a"><u>Villar-López</u>, Chover, Marín-Lora · CEV 2026, Congreso Español de Videojuegos · actas pendientes de publicación</p></div>
+      <div class="paper"><p class="t">Título por anunciar</p><p class="a"><u>Villar-López</u> et al. · IEEE Transactions on Games · próximamente</p></div>
+    </div>
+  </section>
+
+  <div class="next"><a class="back" href="../../index.html#work">← Todo el trabajo</a><a class="btn" href="../fitoon/index.html">Siguiente: Fitoon →</a></div>
+</main>
+
+<footer>Dibujado, modelado y programado por María Villar</footer>
+<script src="../../../assets/js/main.js" defer></script>
+</body>
+</html>

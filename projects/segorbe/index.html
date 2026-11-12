@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Guardianes de Segorbe · María Villar</title>
+<meta name="description" content="An augmented reality tourism game for the town of Segorbe, made in Unreal Engine 5 and published on Google Play.">
+<link rel="canonical" href="https://mariavllr.github.io/projects/segorbe/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Guardianes de Segorbe · María Villar">
+<meta property="og:description" content="An augmented reality tourism game for the town of Segorbe, made in Unreal Engine 5 and published on Google Play.">
+<meta property="og:url" content="https://mariavllr.github.io/projects/segorbe/">
+<meta property="og:image" content="https://mariavllr.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://mariavllr.github.io/projects/segorbe/">
+<link rel="alternate" hreflang="es" href="https://mariavllr.github.io/es/projects/segorbe/">
+<link rel="alternate" hreflang="x-default" href="https://mariavllr.github.io/projects/segorbe/">
+<meta name="theme-color" content="#FFF8E7">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html" aria-label="María Villar, home">MV.</a>
+    <nav aria-label="Sections"><a href="../../index.html#work">Work</a><a href="../../index.html#research">Research</a><a href="../../index.html#art">Art</a><a href="../../index.html#about">About</a><a href="../../index.html#contact">Contact</a></nav>
+    <div class="lang" role="group" aria-label="Language"><a href="#" hreflang="en" lang="en" aria-current="page">EN</a><a href="../../es/projects/segorbe/index.html" hreflang="es" lang="es">ES</a></div>
+  </div>
+</header>
+
+<main id="main" class="wrap case">
+  <a class="back" href="../../index.html#work">← Back to all work</a>
+  <p class="meta">GameRS · Published February 2024</p>
+  <h1>Guardianes de Segorbe</h1>
+  <p class="lede">A tourism game that turns the streets of a historic town into the level. Characters from Segorbe's past appear in augmented reality and challenge you to learn their story.</p>
+  <div class="cover phone-cover stick">
+    <span class="tape" aria-hidden="true"></span>
+    <div class="phone-stage" style="background-image:url('../../assets/img/segorbe-aerial.webp')">
+      <div class="phone big"><video class="loop" autoplay muted loop playsinline preload="metadata" poster="../../assets/img/segorbe-ar.webp" aria-label="Phone recording in Segorbe: the Duke of Segorbe stands in AR on the square in front of the town hall and talks through a dialogue box, then the timer for his challenge starts"><source src="../../assets/video/segorbe-ar.mp4" type="video/mp4"></video></div>
+    </div>
+    <p class="yt-note">A real playthrough recorded in front of Segorbe town hall.</p>
+  </div>
+  <dl class="facts">
+    <div><dt>My role</dt><dd>AR and gameplay programming, dialogue UI</dd></div>
+    <div><dt>Team</dt><dd>GameRS Videogames Research Group</dd></div>
+    <div><dt>Client</dt><dd>Segorbe town hall</dd></div>
+    <div><dt>Built with</dt><dd>Unreal Engine 5, Google ARCore</dd></div>
+    <div><dt>Platform</dt><dd>Android · Google Play</dd></div>
+  </dl>
+
+  <section>
+    <h2>The challenge</h2>
+    <p>Classic tourist guides are useful but easy to skim and forget. The town hall wanted visitors to walk through Segorbe and actually remember its history, from Iberian and Roman roots to its medieval walls.</p>
+  </section>
+
+  <section>
+    <h2>How it plays</h2>
+    <div class="story"><figure><div class="phone"><img src="../../assets/img/segorbe-map.webp" alt="Map of Segorbe with numbered location pins" loading="lazy"></div><figcaption><b>1. Walk to a landmark</b>The map shows the ten spots around town.</figcaption></figure><figure><div class="phone"><img src="../../assets/img/segorbe-scan.webp" alt="Scan screen asking the player to scan the coat of arms in front of the town hall" loading="lazy"></div><figcaption><b>2. Scan a real object</b>Each spot has a symbol to point the camera at.</figcaption></figure><figure><div class="phone"><img src="../../assets/img/segorbe-duchess.webp" alt="The Duchess of Segorbe in AR in a street, greeting the player in a dialogue box" loading="lazy"></div><figcaption><b>3. A character appears</b>They talk to you through the dialogue UI I made.</figcaption></figure><figure><div class="phone"><img src="../../assets/img/segorbe-minigame.webp" alt="AR minigame: a red cord lying on the real pavement, with a timer at the top" loading="lazy"></div><figcaption><b>4. Solve their challenge</b>Here, find the lost keys and their cord around the square.</figcaption></figure><figure><div class="phone"><img src="../../assets/img/segorbe-complete.webp" alt="Level complete screen with three stars, the keys and a character card" loading="lazy"></div><figcaption><b>5. Earn a key gem</b>Stars, a piece of the city key and the character card.</figcaption></figure></div>
+    <p>The Dukes of Segorbe wait in Plaza del Agua Limpia, botanist Carlos Pau sets a greenhouse challenge in the Botanical Garden, and in the Cathedral a bishop asks you to play the bells. Collect every gem and the town names you an honorary Guardian.</p>
+  </section>
+
+  <section>
+    <h2>What I did</h2>
+    <ul class="did">
+      <li>Programmed the game in Unreal Engine 5 with ARCore, including the augmented reality.</li>
+      <li>Designed and built the dialogue UI that the characters use to talk to the player.</li>
+      <li class="todo">add: what exactly you built (image tracking, character placement, minigames?)</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Characters in the street</h2>
+    <p>Figures from Segorbe's history appear on the real streets where their stories happened. The dialogue boxes they speak through are my UI.</p>
+    <div class="story street"><figure><div class="phone"><img src="../../assets/img/segorbe-amazon.webp" alt="An amazon riding a horse in AR next to a building, saying hello in a dialogue box" loading="lazy"></div><figcaption>An amazon on horseback</figcaption></figure><figure><div class="phone"><img src="../../assets/img/segorbe-maria-de-luna.webp" alt="María de Luna in AR next to a stone plaque, introducing herself in a dialogue box" loading="lazy"></div><figcaption>María de Luna, queen consort of Aragon</figcaption></figure><figure><div class="phone"><img src="../../assets/img/segorbe-duke.webp" alt="The Duke of Segorbe in AR on the square in front of the town hall, speaking in a dialogue box" loading="lazy"></div><figcaption>The Duke of Segorbe, at the town hall</figcaption></figure></div>
+  </section>
+
+  <section>
+    <h2>Results</h2>
+    <ul class="did">
+      <li>Published on Google Play in February 2024. It can only be played in Segorbe.</li>
+      <li>Shown at Guerrilla Game Festival 2024 and Tourism Day Benidorm.</li>
+      <li>Covered by regional press.</li>
+    </ul>
+    <div class="links" style="margin-top:14px"><a href="https://play.google.com/store/apps/details?id=com.Gamers.Guardianes">Get it on Google Play</a><a href="https://www.youtube.com/watch?v=e5QA6OeCTxU">Watch the video</a><a href="https://www.elperiodicomediterraneo.com/comarcas/2024/02/26/videojuego-personajes-castellon-historia-pantalla-legendarios-segorbe-turismo-uji-98677100.html">In the press</a><a href="https://turismo.segorbe.es/guardianes-de-segorbe/">Town hall page</a></div>
+    <figure class="shotfig poster"><img src="../../assets/img/segorbe-poster.webp" alt="Guardianes de Segorbe poster: a phone showing the game over an aerial photo of the town, with QR codes to download it" loading="lazy"><figcaption>Promotional poster, designed with the team.</figcaption></figure>
+  </section>
+
+  <div class="next"><a class="back" href="../fitoon/index.html">← Fitoon</a><a class="btn" href="../nebali/index.html">Next: Nebali →</a></div>
+</main>
+
+<footer>Drawn, modelled and coded by María Villar</footer>
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

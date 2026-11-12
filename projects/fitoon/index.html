@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fitoon · María Villar</title>
+<meta name="description" content="An obstacle-race game for treadmill runners, controlled with your head through the phone's front camera.">
+<link rel="canonical" href="https://mariavllr.github.io/projects/fitoon/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="Fitoon · María Villar">
+<meta property="og:description" content="An obstacle-race game for treadmill runners, controlled with your head through the phone's front camera.">
+<meta property="og:url" content="https://mariavllr.github.io/projects/fitoon/">
+<meta property="og:image" content="https://mariavllr.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://mariavllr.github.io/projects/fitoon/">
+<link rel="alternate" hreflang="es" href="https://mariavllr.github.io/es/projects/fitoon/">
+<link rel="alternate" hreflang="x-default" href="https://mariavllr.github.io/projects/fitoon/">
+<meta name="theme-color" content="#FFF8E7">
+<link rel="icon" href="../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html" aria-label="María Villar, home">MV.</a>
+    <nav aria-label="Sections"><a href="../../index.html#work">Work</a><a href="../../index.html#research">Research</a><a href="../../index.html#art">Art</a><a href="../../index.html#about">About</a><a href="../../index.html#contact">Contact</a></nav>
+    <div class="lang" role="group" aria-label="Language"><a href="#" hreflang="en" lang="en" aria-current="page">EN</a><a href="../../es/projects/fitoon/index.html" hreflang="es" lang="es">ES</a></div>
+  </div>
+</header>
+
+<main id="main" class="wrap case">
+  <a class="back" href="../../index.html#work">← Back to all work</a>
+  <p class="meta">GameRS · Universitat Jaume I</p>
+  <h1>Fitoon</h1>
+  <p class="lede">An obstacle-race game for treadmill runners. No controller, no wearables: just the phone in front of you and your own head.</p>
+  <div class="cover yt stick" data-yt="xfHYq_1b6PE" data-title="Fitoon trailer">
+    <span class="tape" aria-hidden="true"></span>
+    <button class="yt-btn" type="button" aria-label="Play the Fitoon trailer on YouTube"><img src="../../assets/img/fitoon-thumb.webp" alt=""><span class="yt-play"><span aria-hidden="true">▶</span> Watch the trailer</span></button>
+  </div>
+  <dl class="facts">
+    <div><dt>My role</dt><dd>AR programming, 3D characters, UI art</dd></div>
+    <div><dt>Team</dt><dd>GameRS Videogames Research Group</dd></div>
+    <div><dt>Built with</dt><dd>Unity, C#, ARCore face tracking, Blender</dd></div>
+    <div><dt>Platform</dt><dd>Android</dd></div>
+  </dl>
+
+  <section>
+    <h2>The challenge</h2>
+    <p>Running on a treadmill gets boring fast, and the apps made for it are mostly simulators. Fitness games like Ring Fit Adventure need extra hardware. We wanted a game anyone could play with only a phone, inspired by party racers like Fall Guys.</p>
+  </section>
+
+  <section>
+    <h2>How your head becomes a controller</h2>
+    <div class="split">
+      <figure class="clip"><video class="loop" autoplay muted loop playsinline preload="metadata" poster="../../assets/img/fitoon-head.webp" aria-label="A teammate runs on a treadmill and turns his head; on the phone in front of him, his character turns the same way"><source src="../../assets/video/fitoon-head.mp4" type="video/mp4"></video><figcaption>A teammate testing Fitoon: he turns his head and the character on the phone turns with him.</figcaption></figure>
+      <div>
+    <div class="flow">
+      <div class="node">Front camera<small>phone fixed on the treadmill</small></div><span class="arr">→</span>
+      <div class="node">Face tracking<small>ARCore</small></div><span class="arr">→</span>
+      <div class="node hl">Vertical head bounce<small>sampled over time</small></div><span class="arr">→</span>
+      <div class="node hl">Fast Fourier Transform<small>finds the step frequency</small></div><span class="arr">→</span>
+      <div class="node">Running cadence<small>sets the character's speed</small></div>
+    </div>
+    <div class="flow">
+      <div class="node">Face tracking</div><span class="arr">→</span>
+      <div class="node hl">Face normal<small>where you're looking</small></div><span class="arr">→</span>
+      <div class="node">Steering<small>dodge left or right</small></div>
+    </div>
+    <p>Run faster and your character runs faster. Look to the side and it moves that way. It even works if you run on the spot without a treadmill.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>My work</h2>
+    <ul class="did">
+      <li>Developed the AR face-tracking controller, including the cadence and direction estimation.</li>
+      <li>Designed and modelled every character in Blender, in a low-poly style built for mobile.</li>
+      <li>Built the character creator: skins, colours and running shoes.</li>
+      <li>Drew the UI art.</li>
+      <li>The hardest problem: the FFT cadence. Noise in the head-tracking signal could give wrong step frequencies, so we ended up looking for ways to smooth it.</li>
+      <li>Bots trained with machine learning to race alongside the player.</li>
+      <li>A local multiplayer version with peer-to-peer over Wi-Fi. Latency was too high, so for now we decided to keep going with bots.</li>
+      <li>Gym integration, medals and rankings, either global or per gym.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Characters</h2>
+    <p>I designed and modelled every runner in Blender, keeping them low-poly and readable at phone size.</p>
+    <div class="lineup"><figure><img src="../../assets/img/fitoon-juan.webp" alt="Juan, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>Juan</figcaption></figure><figure><img src="../../assets/img/fitoon-diego.webp" alt="Diego, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>Diego</figcaption></figure><figure><img src="../../assets/img/fitoon-laura.webp" alt="Laura, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>Laura</figcaption></figure><figure><img src="../../assets/img/fitoon-paula.webp" alt="Paula, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>Paula</figcaption></figure><figure><img src="../../assets/img/fitoon-alberto.webp" alt="Alberto, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>Alberto</figcaption></figure></div>
+    <figure class="shotfig"><img src="../../assets/img/fitoon-creator.webp" alt="Fitoon character creator: a runner in an orange t-shirt with colour swatches for clothes and a Save button" loading="lazy"><figcaption>The character creator, which I also programmed: skins, colours and running shoes.</figcaption></figure>
+  </section>
+
+  <section>
+    <h2>In the game</h2>
+    <div class="shots">
+      <figure class="shotfig wide"><img src="../../assets/img/fitoon-race-1.webp" alt="Third-person view of a crowd of runners at the start line on a sandy track" loading="lazy"></figure>
+      <figure class="shotfig"><img src="../../assets/img/fitoon-race-2.webp" alt="Runners crossing a colourful obstacle course over blue water" loading="lazy"></figure>
+      <figure class="shotfig"><img src="../../assets/img/fitoon-menu.webp" alt="Fitoon main menu: a character running on a treadmill, with Shop, Runner and Play buttons" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Results</h2>
+    <ul class="did">
+      <li>Shown at Guerrilla Game Festival 2024.</li>
+      <li>Papers listed on the <a href="https://sites.google.com/uji.es/gamers/fitoon">GameRS project page</a>.</li>
+    </ul>
+    <div class="links" style="margin-top:14px"><a href="https://youtu.be/xfHYq_1b6PE">Watch the trailer</a><a href="https://www.mdpi.com/1424-8220/26/1/20">Read the paper</a><a href="https://sites.google.com/uji.es/gamers/fitoon">GameRS project page</a></div>
+  </section>
+
+  <div class="next"><a class="back" href="../wfc/index.html">← WFC world generator</a><a class="btn" href="../segorbe/index.html">Next: Guardianes de Segorbe →</a></div>
+</main>
+
+<footer>Drawn, modelled and coded by María Villar</footer>
+<script src="../../assets/js/main.js" defer></script>
+</body>
+</html>

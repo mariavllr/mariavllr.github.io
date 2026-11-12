@@ -1,0 +1,228 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>María Villar · Technical artist</title>
+<meta name="description" content="Technical artist from Spain. I draw, model and code: procedural generation with Wave Function Collapse, 3D characters and games in Unity, Blender and Unreal Engine 5.">
+<link rel="canonical" href="https://mariavllr.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_GB">
+<meta property="og:title" content="María Villar · Technical artist">
+<meta property="og:description" content="Technical artist from Spain. I draw, model and code: procedural generation with Wave Function Collapse, 3D characters and games in Unity, Blender and Unreal Engine 5.">
+<meta property="og:url" content="https://mariavllr.github.io/">
+<meta property="og:image" content="https://mariavllr.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://mariavllr.github.io/">
+<link rel="alternate" hreflang="es" href="https://mariavllr.github.io/es/">
+<link rel="alternate" hreflang="x-default" href="https://mariavllr.github.io/">
+<meta name="theme-color" content="#FFF8E7">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="index.html" aria-label="María Villar, home">MV.</a>
+    <nav aria-label="Sections"><a href="#work">Work</a><a href="#research">Research</a><a href="#art">Art</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+    <div class="lang" role="group" aria-label="Language"><a href="#" hreflang="en" lang="en" aria-current="page">EN</a><a href="es/index.html" hreflang="es" lang="es">ES</a></div>
+  </div>
+</header>
+
+<main id="main" class="wrap">
+  <div id="top" class="spread hero">
+    <div class="page">
+      <div class="portrait"><div class="b1"></div><div class="b2"></div><img src="assets/img/portrait.webp" alt="Self-portrait of María: ink line and marker colour, brown ponytail, yellow t-shirt and denim overalls"></div>
+      <h1>María Villar</h1>
+      <p class="role">Technical artist. <b>3D generalist.</b></p>
+      <p class="intro">PhD researcher in procedural generation at GameRS, Universitat Jaume I. I build characters, tools and games in Unity, Blender and Unreal Engine 5.</p>
+      <div class="note"><span class="hand">try generating an island!</span>
+        <svg class="doodle" width="64" height="30" viewBox="0 0 64 30" aria-hidden="true"><path d="M3 20 C 18 6, 34 30, 52 14 M44 8 L54 13 L46 22"/></svg></div>
+    </div>
+    <div class="page world">
+      <div class="frame sketch play" data-embed="" data-itch="https://mariavllr.itch.io/" data-cover="assets/img/wfc-cover.webp" data-title="WFC world generator" data-button="gen"><span class="tape" aria-hidden="true"></span>
+        <canvas id="wfc" width="640" height="400" role="img" aria-label="An isometric island of water, beach, grass, forest and village tiles, generated in the browser with Wave Function Collapse"></canvas>
+      </div>
+      <div class="world-bar">
+        <span class="caption">Island generated with Wave Function Collapse (Unity build coming soon). <span id="stat"></span></span>
+        <button class="btn" id="gen" type="button">Grow a new island ↻</button>
+      </div>
+    </div>
+  </div>
+
+  <section id="work" aria-labelledby="work-h">
+    <div class="sec-head"><h2 id="work-h">Selected work</h2><span class="hand">things I've built</span>
+      <svg class="doodle" width="70" height="20" viewBox="0 0 70 20" aria-hidden="true"><path d="M3 12 Q 12 3, 20 12 T 37 12 T 54 12 T 67 10"/></svg></div>
+    <div class="work">
+
+      <article class="piece feature stick">
+        <span class="badge">PhD project</span>
+        <div class="shot"><span class="tape" aria-hidden="true"></span><video class="loop" autoplay muted loop playsinline preload="metadata" poster="assets/img/wfc-island.webp" aria-label="An island made by the WFC generator: cliffs, two villages, a river with bridges and trees moving in the wind, surrounded by animated sea"><source src="assets/video/wfc-island.mp4" type="video/mp4"></video></div>
+        <div>
+          <p class="meta">Unity · C# · Blender · 2025 – now</p>
+          <h3>WFC world generator</h3>
+          <p>A 3D tile-based world generator inspired by Townscaper, with two modes: press a button to generate a whole island, or build it yourself by dragging tiles from a queue while the world collapses around your choices. I model the tiles in Blender and write the solver, tools and shaders in Unity.</p>
+          <div class="role-list"><span class="chip y">WFC solver</span><span class="chip y">Tile modelling</span><span class="chip">Interactive placement</span><span class="chip">Shaders</span></div>
+          <a class="btn" href="projects/wfc/index.html">See how it works →</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="minor-head"><h3>Also at GameRS</h3><span class="hand">professional projects, 2023 – 2025</span></div>
+    <div class="minor">
+      <article class="mini stick">
+        <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img src="assets/img/fitoon-thumb.webp" alt="Fitoon key art: a runner next to a phone showing her character in the race, with the lines Run in real life, run in game" loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true"><source src="assets/video/fitoon-gameplay.mp4" type="video/mp4"></video></div>
+        <p class="meta">Unity · ARCore · Android</p>
+        <h3>Fitoon</h3>
+        <p>A treadmill racing game controlled with your head through the phone's front camera.</p>
+        <div class="role-list"><span class="chip y">AR programming</span><span class="chip">3D characters</span><span class="chip">UI art</span></div>
+        <a class="btn case-btn" href="projects/fitoon/index.html">Read the case study →</a>
+      </article>
+      <article class="mini stick">
+        <span class="badge">On Google Play</span>
+        <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img src="assets/img/segorbe-thumb.webp" alt="Guardianes de Segorbe logo over an aerial view of the town" loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true"><source src="assets/video/segorbe-hover.mp4" type="video/mp4"></video></div>
+        <p class="meta">Unreal Engine 5 · ARCore · Android</p>
+        <h3>Guardianes de Segorbe</h3>
+        <p>An AR tourism game where figures from the history of the town of Segorbe appear at real landmarks.</p>
+        <div class="role-list"><span class="chip y">AR programming</span><span class="chip">Dialogue UI</span></div>
+        <a class="btn case-btn" href="projects/segorbe/index.html">Read the case study →</a>
+      </article>
+    </div>
+
+    <div class="minor-head"><h3>Personal and jam games</h3><span class="hand">other projects</span></div>
+    <div class="minor">
+      <article class="mini stick">
+        <span class="badge">Degree project</span>
+        <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img src="assets/img/nebali-card.webp" alt="Nebali: The Lost Island, a low-poly island with palm trees, a wooden pier and the main character, Mateo" loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true"><source src="assets/video/nebali-campfire.mp4" type="video/mp4"></video></div>
+        <p class="meta">Unity · Blender · Clip Studio Paint · 2023</p>
+        <h3>Nebali: The Lost Island</h3>
+        <p>My final degree project. Mateo is shipwrecked on an unknown island and helps its people free it from the Boos. Presented at the Congreso Español de Videojuegos.</p>
+        <div class="role-list"><span class="chip y">3D models and textures</span><span class="chip y">Shaders</span><span class="chip">Game design and writing</span><span class="chip">Programming</span><span class="chip">UI</span></div>
+        <a class="btn case-btn" href="projects/nebali/index.html">Read the case study →</a>
+        <div class="links"><a href="https://mariavllr.itch.io/nebali-the-lost-island">Play on itch.io</a><a href="https://www.youtube.com/watch?v=X46pWPQkmEc">Gameplay video</a><a href="https://repositori.uji.es/xmlui/handle/10234/203636">Read the thesis</a></div>
+      </article>
+      <article class="mini stick">
+        <span class="badge">Jam winner</span>
+        <div class="shot hover-vid"><span class="tape" aria-hidden="true"></span><img src="assets/img/tgf-card.webp" alt="The enemy as a medieval knight with a sword, next to a red shield" loading="lazy"><video muted loop playsinline preload="none" aria-hidden="true"><source src="assets/video/tgf-knight.mp4" type="video/mp4"></video></div>
+        <p class="meta">UJI Game Jam 2026 · 48h · Theme: One enemy only</p>
+        <h3>That Goddamn Face!</h3>
+        <p>A small project made in 48 hours. A first-person game about a single enemy you can never get rid of. You face the same man through prehistory, the Middle Ages and the Wild West, fighting him with different weapons. I modelled every 3D character in Blender and adapted their animations.</p>
+        <div class="role-list"><span class="chip y">3D characters</span><span class="chip y">Animation</span></div>
+        <a class="btn case-btn" href="projects/that-goddamn-face/index.html">Read the case study →</a>
+        <div class="links"><a href="https://mariavllr.itch.io/that-goddamn-face">Play on itch.io</a><a href="https://www.youtube.com/watch?v=6AdIq4vunBU">Trailer</a><a href="https://itch.io/jam/uji-game-jam-26-ugj26/rate/4272632">Jam page</a></div>
+      </article>
+    </div>
+    <div class="links" style="margin-top:20px"><a href="https://mariavllr.itch.io/">More of my games on itch.io →</a></div>
+  </section>
+
+  <section id="research" aria-labelledby="research-h">
+    <div class="sec-head"><h2 id="research-h">Research</h2><span class="hand">what I work on every day</span>
+      <svg class="doodle" width="70" height="20" viewBox="0 0 70 20" aria-hidden="true"><path d="M3 12 Q 12 3, 20 12 T 37 12 T 54 12 T 67 10"/></svg></div>
+    <div class="two">
+      <div class="card stick">
+        <p class="meta">PhD · GameRS, Universitat Jaume I · 2025 – now</p>
+        <h3 style="font-size:clamp(1.6rem,3.4vw,2.2rem);margin:6px 0 12px">Interactive, artist-oriented procedural worlds</h3>
+        <p>My thesis studies procedural content generation with Wave Function Collapse. I look at how generated worlds can keep the feel of hand-made art, and how artists and players can shape what the algorithm builds.</p>
+        <div class="role-list"><span class="chip y">Wave Function Collapse</span><span class="chip y">Procedural generation</span><span class="chip">Interactive generation</span><span class="chip">3D tile sets</span></div>
+        <a class="btn" href="projects/wfc/index.html">See the generator →</a>
+      </div>
+      <div class="card stick">
+        <h3>Publications</h3>
+        <div style="margin-top:10px">
+          <div class="paper"><p class="t"><a href="https://doi.org/10.2312/ceig.20251107">Procedural generation of 3D maps with Wave Function Collapse: optimization and advanced constraints</a></p><p class="a"><u>Villar-López</u>, Chover · CEIG 2025, Spanish Computer Graphics Conference (Eurographics)</p></div>
+          <div class="paper"><p class="t">Diseño y evaluación de un videojuego basado en Wave Function Collapse interactivo</p><p class="a"><u>Villar-López</u>, Chover, Marín-Lora · CEV 2026, Spanish Videogames Conference · proceedings forthcoming</p></div>
+          <div class="paper"><p class="t"><a href="https://link.springer.com/article/10.1007/s10055-026-01355-w">Evaluating game experience in a treadmill exergame: virtual reality versus screen-based display</a></p><p class="a">Marín-Lora, <u>Villar-López</u>, et al. · Virtual Reality (Springer), 2026</p></div>
+          <div class="paper"><p class="t"><a href="https://www.mdpi.com/1424-8220/26/1/20">Optimizing the interaction system for treadmill video games using a smartphone's front camera</a></p><p class="a">Martin, Marín-Lora, <u>Villar-López</u>, Chover · Sensors, 2026</p></div>
+        </div>
+        <div class="links" style="margin-top:10px"><a href="https://orcid.org/0009-0007-8211-3736">All publications on ORCID →</a></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="art" aria-labelledby="art-h">
+    <div class="sec-head"><h2 id="art-h">Art</h2><span class="hand">3D modelling</span>
+      <svg class="doodle" width="34" height="34" viewBox="0 0 34 34" aria-hidden="true"><path d="M17 3 L21 13 L31 14 L23 21 L26 31 L17 25 L8 31 L11 21 L3 14 L13 13 Z"/></svg></div>
+    <p class="art-intro">Three kinds of work: an organic character, low-poly characters optimised for mobile games, and a hard-surface environment.</p>
+    <div class="gallery">
+      <figure class="art stick"><button class="proc-open" type="button" data-proc="proc-dryad" aria-label="See the dryad, from blocking to render"><img src="assets/img/dryad.webp" alt="3D render of a green dryad with antlers and leafy clothes, with a glowing pattern on one arm, standing in a stylised night forest" loading="lazy"></button><figcaption><b>Forest dryad</b><span class="kind">Organic character</span>ZBrush, Maya, Substance Painter, UE5<button class="proc-link" type="button" data-proc="proc-dryad">See the process →</button></figcaption></figure>
+      <figure class="art stick"><button class="proc-open cycle" type="button" data-proc="proc-fitoon" aria-label="The five Fitoon runners. Open to see each one"><img class="on" src="assets/img/fitoon-juan.webp" alt="" loading="lazy"><img src="assets/img/fitoon-laura.webp" alt="" loading="lazy"><img src="assets/img/fitoon-alberto.webp" alt="" loading="lazy"><img src="assets/img/fitoon-paula.webp" alt="" loading="lazy"><img src="assets/img/fitoon-diego.webp" alt="" loading="lazy"></button><figcaption><b>Fitoon runners</b><span class="kind">Low-poly for mobile</span>Blender<button class="proc-link" type="button" data-proc="proc-fitoon">See more →</button></figcaption></figure>
+      <figure class="art stick"><div class="ph"><span class="hand">interior render</span><span class="caption">coming soon</span></div><figcaption><b>Interior scene</b><span class="kind">Environment, hard-surface</span><span class="todo">add title and tools</span></figcaption></figure>
+    </div>
+    <template id="proc-reel" data-title="Animation reel" data-more="https://vimeo.com/1082870306" data-more-label="Open on Vimeo →" data-close="Close">
+        <figure data-step="Animation reel" data-iframe="https://player.vimeo.com/video/1082870306?h=6bd6f46d95&amp;dnt=1&amp;autoplay=1"><figcaption>Animation and 3D modelling from my MA in 3D Animation.</figcaption></figure>
+    </template>
+    <template id="proc-fitoon" data-title="Fitoon runners · the cast" data-more="projects/fitoon/" data-more-label="Read the Fitoon case study →" data-close="Close" data-prev="Previous" data-next="Next">
+        <figure data-step="Orange boy"><img src="assets/img/fitoon-juan.webp" alt="Juan, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>One of the five runners, low-poly for mobile.</figcaption></figure>
+        <figure data-step="Blonde girl"><img src="assets/img/fitoon-laura.webp" alt="Laura, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>One of the five runners, low-poly for mobile.</figcaption></figure>
+        <figure data-step="Bearded boy"><img src="assets/img/fitoon-alberto.webp" alt="Alberto, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>One of the five runners, low-poly for mobile.</figcaption></figure>
+        <figure data-step="Girl with glasses"><img src="assets/img/fitoon-paula.webp" alt="Paula, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>One of the five runners, low-poly for mobile.</figcaption></figure>
+        <figure data-step="Green boy"><img src="assets/img/fitoon-diego.webp" alt="Diego, a low-poly Fitoon character, in the character select room" loading="lazy"><figcaption>One of the five runners, low-poly for mobile.</figcaption></figure>
+        <figure data-step="Customiser"><img src="assets/img/fitoon-creator.webp" alt="Fitoon character creator: a runner in an orange t-shirt with colour swatches for clothes and a Save button" loading="lazy"><figcaption>In the game, players can recolour skin, hair and clothes.</figcaption></figure>
+    </template>
+    <template id="proc-dryad" data-title="Forest dryad · from blocking to render" data-more="https://mariavllr.artstation.com/projects/5WYOl8" data-more-label="Full process on ArtStation →" data-close="Close" data-prev="Previous" data-next="Next">
+        <figure data-step="Blocking"><img src="assets/img/dryad-p1-blocking.webp" alt="Front, side and back views of the dryad blocked out in coloured base shapes" loading="lazy"><figcaption>Blocking out proportions and shapes in ZBrush, before any detail.</figcaption></figure>
+        <figure data-step="Sculpt"><img src="assets/img/dryad-p2-sculpt.webp" alt="Untextured ZBrush sculpt of the dryad, front view" loading="lazy"><figcaption>High-poly sculpt in ZBrush: clothes, hair and antlers.</figcaption></figure>
+        <figure data-step="Retopology"><img src="assets/img/dryad-p3-retopo.webp" alt="Wireframe of the low-poly dryad mesh" loading="lazy"><figcaption>Low-poly retopology in Maya, ready to bake.</figcaption></figure>
+        <figure data-step="Texturing"><img src="assets/img/dryad-p4-texture.webp" alt="The dryad head being painted in Substance Painter" loading="lazy"><figcaption>Texturing in Substance Painter.</figcaption></figure>
+        <figure data-step="Final"><img src="assets/img/dryad-final-1.webp" alt="Full-body render of the dryad in a night forest" loading="lazy"><figcaption>Final render.</figcaption></figure>
+        <figure data-step="Final"><img src="assets/img/dryad-final-4.webp" alt="The dryad in three-quarter view in front of stone steps and a glowing tree" loading="lazy"><figcaption>Final render, three-quarter view.</figcaption></figure>
+        <figure data-step="Final"><img src="assets/img/dryad-final-7.webp" alt="Close-up of the dryad face with antlers and leaf-like hair" loading="lazy"><figcaption>Close-up.</figcaption></figure>
+    </template>
+    <div class="also">
+      <p class="also-label hand">also…</p>
+      <figure class="art-mini"><button class="proc-open reel-thumb" type="button" data-proc="proc-reel" aria-label="Play the animation reel"><img src="https://i.vimeocdn.com/video/2013950092-5a4fc607c18ffdf52ef9208e7c43d5fa98d66e0bb44d759a38563e4369bccf45-d_640x360" alt="" loading="lazy" onerror="this.remove()"><span class="reel-play" aria-hidden="true">▶</span></button><figcaption><b>Animation reel</b>MA in 3D Animation · Maya · 48 s<button class="proc-link" type="button" data-proc="proc-reel">Watch it →</button></figcaption></figure>
+      <figure class="art-mini"><img src="assets/img/portrait.webp" alt="Digital painting self-portrait in ink and marker style" loading="lazy"><figcaption><b>Drawing</b>On Instagram</figcaption></figure>
+      <div class="also-more"><p class="caption">More work</p><a href="https://artstation.com/mariavllr">3D on ArtStation →</a><a href="https://instagram.com/mariavillardev">Drawings on Instagram →</a></div>
+    </div>
+  </section>
+
+  
+
+  <section id="about" aria-labelledby="about-h">
+    <div class="sec-head"><h2 id="about-h">About me</h2><span class="hand">hi again!</span></div>
+    <div class="about">
+      <div class="card stick">
+        <p>Hi! I'm María and I live in Spain. I studied a degree in Game Design and Development and specialised in 3D. My favourite games are The Legend of Zelda series, Animal Crossing and Stardew Valley. I'm a creative person, open to new ideas. I love making new things and always give the art side a lot of weight, which is where the idea for my thesis came from. Besides games, my hobbies are drawing, playing the piano and making clay figures.</p>
+        <ul class="timeline">
+          <li><span class="y">2025 – now</span><span>Predoctoral researcher, GameRS<small>PhD in procedural generation · Universitat Jaume I</small></span></li>
+          <li><span class="y">2023 – 25</span><span>Game developer and 3D artist, GameRS<small>Serious and active mobile games in Unity and UE5</small></span></li>
+          <li><span class="y">Master</span><span>MA in 3D Animation<small>Universidad Europea de Madrid</small></span></li>
+          <li><span class="y">Degree</span><span>BSc in Game Design and Development<small>Universitat Jaume I · Best academic record of my class</small></span></li>
+        </ul>
+      </div>
+      <div class="card stick">
+        <h3>Toolbox</h3>
+        <div class="tools">
+          <div><span class="k">Engines</span><span class="chips" style="margin:0"><span class="chip y">Unity</span><span class="chip">Unreal Engine 5</span></span></div>
+          <div><span class="k">3D</span><span class="chips" style="margin:0"><span class="chip y">Blender</span><span class="chip">Maya</span><span class="chip">ZBrush</span><span class="chip">Substance Painter</span></span></div>
+          <div><span class="k">2D and video</span><span class="chips" style="margin:0"><span class="chip">Photoshop</span><span class="chip">Premiere</span><span class="chip">After Effects</span></span></div>
+          <div><span class="k">Code</span><span class="chips" style="margin:0"><span class="chip y">C#</span><span class="chip">C++</span><span class="chip">Python</span><span class="chip">JavaScript</span><span class="chip">Git / GitHub</span></span></div>
+          <div><span class="k">Also</span><span class="chips" style="margin:0"><span class="chip s">AR (ARCore)</span><span class="chip s">VR (Meta Quest)</span><span class="chip s">Procedural generation</span></span></div>
+        </div>
+        <p class="caption" style="margin-top:14px">Yellow = advanced level.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="contact" aria-labelledby="contact-h">
+    <p class="hand">want to talk?</p>
+    <h2 id="contact-h">Say hello!</h2>
+    <div class="links">
+      <a href="https://www.linkedin.com/in/mariavillarlopez/">LinkedIn</a>
+      <a href="https://mariavillardev.wordpress.com/wp-content/uploads/2022/06/curriculum2026.pdf">CV (PDF)</a>
+      <a href="https://artstation.com/mariavllr">ArtStation</a>
+      <a href="https://mariavllr.itch.io/">itch.io</a>
+      <a href="https://instagram.com/mariavillardev">Instagram</a>
+      <a href="https://orcid.org/0009-0007-8211-3736">ORCID</a>
+    </div>
+  </section>
+</main>
+
+<footer>Made by María Villar with ♥</footer>
+<script src="assets/js/main.js" defer></script>
+</body>
+</html>

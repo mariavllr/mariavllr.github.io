@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Fitoon · María Villar</title>
+<meta name="description" content="Un juego de carreras de obstáculos para correr en cinta, que se controla con la cabeza a través de la cámara frontal del móvil.">
+<link rel="canonical" href="https://mariavllr.github.io/es/projects/fitoon/">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="es_ES">
+<meta property="og:title" content="Fitoon · María Villar">
+<meta property="og:description" content="Un juego de carreras de obstáculos para correr en cinta, que se controla con la cabeza a través de la cámara frontal del móvil.">
+<meta property="og:url" content="https://mariavllr.github.io/es/projects/fitoon/">
+<meta property="og:image" content="https://mariavllr.github.io/assets/img/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="alternate" hreflang="en" href="https://mariavllr.github.io/projects/fitoon/">
+<link rel="alternate" hreflang="es" href="https://mariavllr.github.io/es/projects/fitoon/">
+<link rel="alternate" hreflang="x-default" href="https://mariavllr.github.io/projects/fitoon/">
+<meta name="theme-color" content="#FFF8E7">
+<link rel="icon" href="../../../assets/img/favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700&family=Figtree:wght@400;500;600&family=Caveat:wght@500;700&display=swap">
+<link rel="stylesheet" href="../../../assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Saltar al contenido</a>
+<header>
+  <div class="wrap">
+    <a class="logo" href="../../index.html" aria-label="María Villar, inicio">MV.</a>
+    <nav aria-label="Secciones"><a href="../../index.html#work">Trabajo</a><a href="../../index.html#research">Investigación</a><a href="../../index.html#art">Arte</a><a href="../../index.html#about">Sobre mí</a><a href="../../index.html#contact">Contacto</a></nav>
+    <div class="lang" role="group" aria-label="Idioma"><a href="../../../projects/fitoon/index.html" hreflang="en" lang="en">EN</a><a href="#" hreflang="es" lang="es" aria-current="page">ES</a></div>
+  </div>
+</header>
+
+<main id="main" class="wrap case">
+  <a class="back" href="../../index.html#work">← Volver a todo el trabajo</a>
+  <p class="meta">GameRS · Universitat Jaume I</p>
+  <h1>Fitoon</h1>
+  <p class="lede">Un juego de carreras de obstáculos para quien corre en cinta. Sin mando ni wearables: solo el móvil delante y tu propia cabeza.</p>
+  <div class="cover yt stick" data-yt="xfHYq_1b6PE" data-title="Tráiler de Fitoon">
+    <span class="tape" aria-hidden="true"></span>
+    <button class="yt-btn" type="button" aria-label="Reproducir el tráiler de Fitoon en YouTube"><img src="../../../assets/img/fitoon-thumb.webp" alt=""><span class="yt-play"><span aria-hidden="true">▶</span> Ver el tráiler</span></button>
+  </div>
+  <dl class="facts">
+    <div><dt>Mi rol</dt><dd>Programación AR, personajes 3D, arte de UI</dd></div>
+    <div><dt>Equipo</dt><dd>GameRS, grupo de investigación en videojuegos</dd></div>
+    <div><dt>Hecho con</dt><dd>Unity, C#, seguimiento facial de ARCore, Blender</dd></div>
+    <div><dt>Plataforma</dt><dd>Android</dd></div>
+  </dl>
+
+  <section>
+    <h2>El reto</h2>
+    <p>Correr en cinta aburre rápido, y las apps pensadas para ello son sobre todo simuladores. Juegos de fitness como Ring Fit Adventure necesitan hardware extra. Queríamos un juego que cualquiera pudiera jugar solo con el móvil, inspirado en carreras multijugador como Fall Guys.</p>
+  </section>
+
+  <section>
+    <h2>Cómo tu cabeza se convierte en un mando</h2>
+    <div class="split">
+      <figure class="clip"><video class="loop" autoplay muted loop playsinline preload="metadata" poster="../../../assets/img/fitoon-head.webp" aria-label="Un compañero corre en una cinta y gira la cabeza; en el móvil que tiene delante, su personaje gira hacia el mismo lado"><source src="../../../assets/video/fitoon-head.mp4" type="video/mp4"></video><figcaption>Un compañero probando Fitoon: gira la cabeza y el personaje del móvil gira con él.</figcaption></figure>
+      <div>
+    <div class="flow">
+      <div class="node">Cámara frontal<small>móvil fijo en la cinta</small></div><span class="arr">→</span>
+      <div class="node">Seguimiento facial<small>ARCore</small></div><span class="arr">→</span>
+      <div class="node hl">Rebote vertical de la cabeza<small>muestreado en el tiempo</small></div><span class="arr">→</span>
+      <div class="node hl">Transformada rápida de Fourier<small>encuentra la frecuencia de zancada</small></div><span class="arr">→</span>
+      <div class="node">Cadencia de carrera<small>marca la velocidad del personaje</small></div>
+    </div>
+    <div class="flow">
+      <div class="node">Seguimiento facial</div><span class="arr">→</span>
+      <div class="node hl">Normal de la cara<small>hacia dónde miras</small></div><span class="arr">→</span>
+      <div class="node">Dirección<small>esquivar a izquierda o derecha</small></div>
+    </div>
+    <p>Si corres más rápido, tu personaje también. Si miras a un lado, se mueve hacia allí. Funciona incluso corriendo en el sitio, sin cinta.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Mi trabajo</h2>
+    <ul class="did">
+      <li>Desarrollé el control por seguimiento facial en AR, incluida la estimación de cadencia y dirección.</li>
+      <li>Diseñé y modelé todos los personajes en Blender, con un estilo low-poly pensado para móvil.</li>
+      <li>Programé el editor de personajes: skins, colores y zapatillas.</li>
+      <li>Dibujé el arte de la interfaz.</li>
+      <li>El problema más difícil: la cadencia con FFT. El ruido en la señal del seguimiento de la cabeza podía dar frecuencias de paso erróneas, así que acabamos buscando formas de suavizarla.</li>
+      <li>Bots entrenados con machine learning que corren junto al jugador.</li>
+      <li>Una versión multijugador local con P2P por wifi. La latencia era demasiado alta, así que por ahora se decidió seguir con bots.</li>
+      <li>Integración con gimnasios, medallas y rankings, globales o por gimnasio.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Personajes</h2>
+    <p>Diseñé y modelé todos los corredores en Blender, en low-poly y fáciles de leer en la pantalla de un móvil.</p>
+    <div class="lineup"><figure><img src="../../../assets/img/fitoon-juan.webp" alt="Juan, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy"><figcaption>Juan</figcaption></figure><figure><img src="../../../assets/img/fitoon-diego.webp" alt="Diego, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy"><figcaption>Diego</figcaption></figure><figure><img src="../../../assets/img/fitoon-laura.webp" alt="Laura, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy"><figcaption>Laura</figcaption></figure><figure><img src="../../../assets/img/fitoon-paula.webp" alt="Paula, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy"><figcaption>Paula</figcaption></figure><figure><img src="../../../assets/img/fitoon-alberto.webp" alt="Alberto, un personaje low-poly de Fitoon, en la sala de selección de personaje" loading="lazy"><figcaption>Alberto</figcaption></figure></div>
+    <figure class="shotfig"><img src="../../../assets/img/fitoon-creator.webp" alt="Editor de personajes de Fitoon: un corredor con camiseta naranja, muestras de color para la ropa y un botón de guardar" loading="lazy"><figcaption>El editor de personajes, que también programé: skins, colores y zapatillas.</figcaption></figure>
+  </section>
+
+  <section>
+    <h2>En el juego</h2>
+    <div class="shots">
+      <figure class="shotfig wide"><img src="../../../assets/img/fitoon-race-1.webp" alt="Vista en tercera persona de un grupo de corredores en la salida de una pista de arena" loading="lazy"></figure>
+      <figure class="shotfig"><img src="../../../assets/img/fitoon-race-2.webp" alt="Corredores cruzando un circuito de obstáculos de colores sobre agua azul" loading="lazy"></figure>
+      <figure class="shotfig"><img src="../../../assets/img/fitoon-menu.webp" alt="Menú principal de Fitoon: un personaje corriendo en una cinta, con los botones de tienda, corredor y jugar" loading="lazy"></figure>
+    </div>
+  </section>
+
+  <section>
+    <h2>Resultados</h2>
+    <ul class="did">
+      <li>Presentado en el Guerrilla Game Festival 2024.</li>
+      <li>Papers mencionados en la <a href="https://sites.google.com/uji.es/gamers/fitoon">página del proyecto en GameRS</a>.</li>
+    </ul>
+    <div class="links" style="margin-top:14px"><a href="https://youtu.be/xfHYq_1b6PE">Ver el tráiler</a><a href="https://www.mdpi.com/1424-8220/26/1/20">Leer el artículo</a><a href="https://sites.google.com/uji.es/gamers/fitoon">Página del proyecto en GameRS</a></div>
+  </section>
+
+  <div class="next"><a class="back" href="../wfc/index.html">← Generador de mundos WFC</a><a class="btn" href="../segorbe/index.html">Siguiente: Guardianes de Segorbe →</a></div>
+</main>
+
+<footer>Dibujado, modelado y programado por María Villar</footer>
+<script src="../../../assets/js/main.js" defer></script>
+</body>
+</html>

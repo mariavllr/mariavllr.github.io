@@ -37,11 +37,10 @@
   <a class="back" href="../../index.html#work">← Back to all work</a>
   <p class="meta">Final degree project · Universitat Jaume I · 2023</p>
   <h1>Nebali: The Lost Island</h1>
-  <p class="lede">A cosy third-person adventure about a castaway, a small island and the people who live on it. I made it on my own for my final degree project: the design, the story, the code, the 3D art, the shaders and the UI.</p>
+  <p class="lede">This game is part of my final degree project, titled “Immersion in video games and mental health narratives”. The project shows how a video game can be fun and enjoyable while subtly exploring a story centred on mental health. The protagonist, Mateo, is shipwrecked on an unknown island, where he discovers he is not alone: he has to talk to the islanders, complete quests and face enemies to free the island from the “Boos”. I developed the whole project myself in Unity.</p>
   <div class="cover yt stick" data-yt="X46pWPQkmEc" data-title="Nebali trailer">
     <span class="tape" aria-hidden="true"></span>
     <button class="yt-btn" type="button" aria-label="Play the Nebali trailer on YouTube"><img src="../../assets/img/nebali-title.webp" alt=""><span class="yt-play"><span aria-hidden="true">▶</span> Watch the trailer</span></button>
-    <p class="yt-note">Plays from YouTube. Nothing loads until you press play.</p>
   </div>
   <dl class="facts">
     <div><dt>My role</dt><dd>Solo developer: design, writing, programming, 3D art, shaders and UI</dd></div>
@@ -52,14 +51,14 @@
   <section>
     <h2>The idea</h2>
     <p>Mateo wakes up on an unknown island after a shipwreck. To find his way home he has to free it from the Boos, small creatures that stand for intrusive thoughts, and on the way he meets the islanders.</p>
-    <p>I wanted a game that deals with mental health without being a therapy game: fun for anyone, with characters you can recognise yourself in. Brivia is a fighter who finds it hard to ask for help, Edbri is a mayor who feels he is never enough, and Leeba is an old fisherman who admits he feels alone.</p>
+    <p>I wanted a game that deals with mental health without being a therapy game: fun for anyone, with characters you can recognise yourself in. For my final degree project I also wanted to explore the cosy aesthetic and model characters and environments from scratch, so I chose this project to apply everything I had learned during my studies.</p>
   </section>
 
   <section>
     <h2>From sketch to game</h2>
     <p>Every character started as a pencil sketch. I modelled them all in Blender: hair built from curves, clothes cut from real sewing patterns and fitted with cloth simulation, and one shared body for all the islanders, so a new character only needs new clothes and hair.</p>
     <div class="chain chain-3"><figure><img src="../../assets/img/nebali-sketch-mateo.webp" alt="Pencil sketches of Mateo in overalls, in different poses" loading="lazy"><figcaption>Sketches</figcaption></figure><span class="arr" aria-hidden="true">→</span><figure><img src="../../assets/img/nebali-mateo-3d.webp" alt="Mateo modelled in Blender, in T-pose" loading="lazy"><figcaption>Blender</figcaption></figure><span class="arr" aria-hidden="true">→</span><figure><img src="../../assets/img/nebali-mateo-game.webp" alt="Mateo standing on the beach in the game" loading="lazy"><figcaption>In the game</figcaption></figure></div>
-    <div class="chain chain-3"><figure><img src="../../assets/img/nebali-sketch-npcs.webp" alt="Pencil sketches of the islanders and small creatures" loading="lazy"><figcaption>Islander sketches</figcaption></figure><span class="arr" aria-hidden="true">→</span><figure><img src="../../assets/img/nebali-brivia-2d.webp" alt="Colour drawing of Brivia, an islander with long blonde hair" loading="lazy"><figcaption>Brivia in 2D</figcaption></figure><span class="arr" aria-hidden="true">→</span><figure><img src="../../assets/img/nebali-brivia-3d.webp" alt="Brivia modelled in Blender, in a green outfit" loading="lazy"><figcaption>Brivia in Blender</figcaption></figure></div>
+    <div class="chain chain-3"><figure><img src="../../assets/img/nebali-sketch-npcs.webp" alt="Pencil sketches of the islanders and small creatures" loading="lazy"><figcaption>Islander sketches</figcaption></figure><span class="arr" aria-hidden="true">→</span><figure><img src="../../assets/img/nebali-brivia-2d.webp" alt="Colour drawing of Brivia, an islander with long red hair" loading="lazy"><figcaption>Brivia in 2D</figcaption></figure><span class="arr" aria-hidden="true">→</span><figure><img src="../../assets/img/nebali-brivia-3d.webp" alt="Brivia modelled in Blender, in a green outfit" loading="lazy"><figcaption>Brivia in Blender</figcaption></figure></div>
     <div class="chain models"><figure><img src="../../assets/img/nebali-islander-3d.webp" alt="Edbri, the mayor, in a purple waistcoat, modelled in Blender in T-pose" loading="lazy"><figcaption>Edbri</figcaption></figure><figure><img src="../../assets/img/nebali-islander2-3d.webp" alt="Leeba, the old fisherman with a beard and glasses, modelled in Blender in T-pose" loading="lazy"><figcaption>Leeba</figcaption></figure></div>
     <p class="caption">The other islanders share the same base body; only clothes and hair change.</p>
     <p class="caption">Animations come from Mixamo, adjusted in Blender.</p>
@@ -68,15 +67,15 @@
   <section>
     <h2>Shaders</h2>
     <div class="shots">
-      <figure class="shotfig"><img src="../../assets/img/nebali-toon.webp" alt="The pier and beach rendered with the toon shader: flat colour bands and dark outlines" loading="lazy"><figcaption><b>Toon shader with outline.</b> Custom lighting in URP Shader Graph: main and extra lights, baked shadows and a colour ramp for hard, clean shading.</figcaption></figure>
-      <figure class="shotfig clip"><video class="loop" autoplay muted loop playsinline preload="metadata" poster="../../assets/img/nebali-water-poster.webp" aria-label="Cartoon water with moving ripples and white foam around the pier and the boat"><source src="../../assets/video/nebali-water.mp4" type="video/mp4"></video><figcaption><b>Cartoon water.</b> Voronoi ripples, vertex waves and foam around anything that touches the water, using a depth-fade subgraph I wrote because that version of Unity didn't include one.</figcaption></figure>
+      <figure class="shotfig"><img src="../../assets/img/nebali-toon.webp" alt="The pier and beach rendered with the toon shader: flat colour bands and dark outlines" loading="lazy"><figcaption><b>Toon shader for the overall lighting.</b> URP Shader Graph: supports the main light and additional lights, baked shadows and a colour ramp to get the toon look.</figcaption></figure>
+      <figure class="shotfig clip"><video class="loop" autoplay muted loop playsinline preload="metadata" poster="../../assets/img/nebali-water-poster.webp" aria-label="Cartoon water with moving ripples and white foam around the pier and the boat"><source src="../../assets/video/nebali-water.mp4" type="video/mp4"></video><figcaption><b>Cartoon water.</b> Voronoi ripples, vertex waves and foam around anything that touches the water, using a Depth Fade subgraph I wrote because that version of Unity didn't include one.</figcaption></figure>
     </div>
     <figure class="shotfig"><div class="timestrip"><img src="../../assets/img/nebali-time-1.webp" alt="The island at a different time of day" loading="lazy"><img src="../../assets/img/nebali-time-2.webp" alt="The island at a different time of day" loading="lazy"><img src="../../assets/img/nebali-time-3.webp" alt="The island at a different time of day" loading="lazy"><img src="../../assets/img/nebali-time-4.webp" alt="The island at a different time of day" loading="lazy"></div><figcaption>Day and night cycle.</figcaption></figure>
   </section>
 
   <section>
     <h2>A node-based dialogue system</h2>
-    <p>The game is built around conversations, so before writing them I built a tool to write them with. It's an editor window inside Unity, made with the GraphView API, where each node holds a character and a line and can branch into several choices.</p>
+    <p>The game is built around conversations, which have several choices and can branch. So I built a tool to write them. It's an editor window inside Unity, made with the GraphView API, where each node holds a character and a line and can branch into several choices.</p>
     <figure class="shotfig"><img src="../../assets/img/nebali-graph.webp" alt="The Narrative Graph editor window in Unity, with connected dialogue nodes and their choices" loading="lazy"><figcaption>The Narrative Graph editor: nodes, choices and a blackboard of variables, saved as reusable assets.</figcaption></figure>
     <ul class="did" style="margin-top:18px">
       <li>Graphs are saved and loaded as ScriptableObject assets that any script can read.</li>
@@ -106,12 +105,12 @@
   </section>
 
   <section>
-    <h2>What I built</h2>
+    <h2>My work</h2>
     <ul class="did">
       <li>All the gameplay code in C#: player controller, Cinemachine camera, combat and enemies, quests, inventory, diary, map and a fishing minigame, connected through events.</li>
-      <li>The dialogue editor and its in-game parser.</li>
+      <li>The dialogue editor and its in-game parser, plus writing all the dialogue in the story.</li>
       <li>Toon and water shaders in URP Shader Graph.</li>
-      <li>Every character and most of the props, modelled and textured in Blender.</li>
+      <li>Design of every character and most of the props, modelled and textured in Blender.</li>
       <li>Performance work for a large terrain: LODs and occlusion culling.</li>
     </ul>
   </section>
